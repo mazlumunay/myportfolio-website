@@ -1,0 +1,9 @@
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
+  .min-vh-100 {
+    min-height: 100vh;
+  }
