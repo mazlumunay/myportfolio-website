@@ -7,3 +7,16 @@
   .min-vh-100 {
     min-height: 100vh;
   }
+
+
+  body{
+  background-image: url('https://bloximages.newyork1.vip.townnews.com/lancasterfarming.com/content/tncms/assets/v3/editorial/b/94/b94fcab6-9e20-11ec-b283-e33a585b3655/622612f8a7e74.image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Makes it fixed while scrolling */
+  }
+
+  .navbar{
+    color: aliceblue;
+  }
