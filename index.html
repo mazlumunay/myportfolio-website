@@ -26,7 +26,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
 <body>
 
   <!--Navbar-->
-  <div class="container navbar">
+  <div class="container">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
         <li class="nav-item">
@@ -60,7 +60,12 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
     </div> -->
     <div class="position-relative overflow-hidden">
       <!-- Hero Image -->
-      <img src="img/autumn.jpg" class="w-100" style="height: 100vh; object-fit: cover;">
+      <img style="
+      width: 100%;
+      height: 50vh;
+      overflow: hidden;
+      border-radius: 55% / 50%; 
+    " src="img/autumn.jpg" class="w-100" style="height: 100vh; object-fit: cover;">
       
       <!-- Content Overlay -->
       <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-center text-white">
