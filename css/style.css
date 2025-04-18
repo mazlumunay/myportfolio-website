@@ -1,18 +1,227 @@
-  .hover-scale {
-    transition: transform 0.3s ease;
+/* =============================================
+   GLOBAL STYLES & VARIABLES
+   ============================================= */
+
+   :root {
+    /* Color Variables */
+    --primary-dark: #212529;
+    --primary-gradient: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    --accent-color: #4ca1af;
+    --text-light: #ffffff;
+    --text-muted: #e9ecef;
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --transition-base: all 0.3s ease;
   }
+  
+  /* =============================================
+     BASE STYLES
+     ============================================= */
+  
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('https://bloximages.newyork1.vip.townnews.com/lancasterfarming.com/content/tncms/assets/v3/editorial/b/94/b94fcab6-9e20-11ec-b283-e33a585b3655/622612f8a7e74.image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* =============================================
+     TYPOGRAPHY
+     ============================================= */
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .display-3 {
+    letter-spacing: -0.5px;
+  }
+  
+  .lead {
+    font-weight: 400;
+    opacity: 0.9;
+  }
+  
+  /* =============================================
+     COMPONENT STYLES
+     ============================================= */
+  
+  /* Navigation */
+  .navbar {
+    background-color: var(--primary-dark);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .navbar-brand, 
+  .nav-link {
+    color: var(--text-light) !important;
+    transition: var(--transition-base);
+  }
+  
+  .nav-link:hover {
+    opacity: 0.8;
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: var(--primary-dark);
+    font-weight: 500;
+  }
+  
+  /* Hero Section */
+  .hero-overlay {
+    background: linear-gradient(rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.7));
+  }
+  
+  /* Cards */
+  .project-card {
+    transition: var(--transition-base);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .card-img-container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+  }
+  
+  .card-img-container img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  /* Buttons */
+  .btn {
+    transition: var(--transition-base);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+  
+  .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: #3a8b9a;
+    border-color: #3a8b9a;
+  }
+  
+  .btn-outline-light:hover {
+    color: var(--primary-dark);
+  }
+  
+  /* Badges */
+  .badge {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  /* GitHub Section */
+  .github-section {
+    background: #111;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 2rem 0;
+  }
+  
+  .social-icon {
+    color: var(--text-light);
+    transition: var(--transition-base);
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+  }
+  
+  .social-icon:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+  }
+  
+  /* =============================================
+     UTILITY CLASSES
+     ============================================= */
+  
+  .hover-scale {
+    transition: var(--transition-base);
+  }
+  
   .hover-scale:hover {
     transform: scale(1.03);
   }
+  
   .min-vh-100 {
     min-height: 100vh;
   }
-
-
-  body{
-  background-image: url('https://bloximages.newyork1.vip.townnews.com/lancasterfarming.com/content/tncms/assets/v3/editorial/b/94/b94fcab6-9e20-11ec-b283-e33a585b3655/622612f8a7e74.image.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Optional: Makes it fixed while scrolling */
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* =============================================
+     MEDIA QUERIES (Responsive Adjustments)
+     ============================================= */
+  
+  @media (max-width: 768px) {
+    .display-3 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-overlay {
+      padding: 2rem 1rem;
+    }
+    
+    .btn-lg {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-brand {
+      font-size: 1.1rem;
+    }
+    
+    .project-card {
+      margin-bottom: 1.5rem;
+    }
   }
