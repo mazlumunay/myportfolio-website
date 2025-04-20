@@ -368,3 +368,25 @@ body {
   padding: 5px 10px;
   font-size: 0.8rem;
 }
+
+/* Custom background shades */
+.bg-dark-2 {
+  background-color: #1a1e21;
+  transition: all 0.3s ease;
+}
+
+/* Publication card hover effect */
+.bg-dark-2:hover {
+  background-color: #212529;
+  transform: translateY(-3px);
+}
+
+/* Text contrast improvements */
+.text-light {
+  opacity: 0.9;
+}
+
+/* Icon styling */
+.bi-journal-text {
+  opacity: 0.8;
+}
