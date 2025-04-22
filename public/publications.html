@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazlum Unay | Publications</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .pub-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/publication-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 300px;
+        }
+        .pub-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--bs-primary);
+            overflow: hidden;
+        }
+        .pub-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .citation {
+            font-family: 'Courier New', monospace;
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Mazlum Unay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./publications.html">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Publication Header -->
+    <header class="pub-header d-flex align-items-center text-white">
+        <div class="container py-5 text-center">
+            <h1 class="display-3 fw-bold mb-3">Publications</h1>
+            <p class="lead mb-0">Academic contributions and technical writings</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row g-4">
+                <!-- Featured Publication -->
+                <div class="col-12">
+                    <div class="card pub-card mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="../img/pub-featured.jpg" class="img-fluid h-100" alt="Featured publication cover" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-primary mb-2">Featured</span>
+                                    <h2 class="card-title">Advanced React Patterns for Modern Applications</h2>
+                                    <p class="text-muted"><i class="bi bi-journal-text me-2"></i>Journal of Web Development, Volume 12, Issue 3</p>
+                                    <p class="card-text">This comprehensive paper explores cutting-edge React patterns that address common challenges in large-scale applications. We demonstrate how compound components, controlled props, and state reducers can create more maintainable and flexible component architectures.</p>
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <span class="badge bg-secondary">React</span>
+                                        <span class="badge bg-secondary">Design Patterns</span>
+                                        <span class="badge bg-secondary">Frontend Architecture</span>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <a href="#" class="btn btn-primary"><i class="bi bi-file-pdf me-2"></i>Download PDF</a>
+                                        <a href="#" class="btn btn-outline-secondary"><i class="bi bi-link-45deg me-2"></i>View Online</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication List -->
+                <div class="col-lg-8">
+                    <!-- Publication 1 -->
+                    <div class="card pub-card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Optimizing React Performance with Memoization Techniques</h3>
+                            <p class="text-muted"><i class="bi bi-calendar me-2"></i>Published: May 2024 | <i class="bi bi-journal me-2"></i>Journal of Web Development</p>
+                            <p class="card-text">This paper presents a systematic approach to performance optimization in React applications through strategic memoization. We introduce a novel benchmarking methodology and demonstrate performance improvements of up to 40% in real-world applications.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary bg-opacity-10 text-primary">React</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Performance</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Memoization</span>
+                            </div>
+                            <div class="citation mb-3">
+                                Unay, M. (2024). Optimizing React Performance with Memoization Techniques. <em>Journal of Web Development</em>, 15(2), 45-67. https://doi.org/xxxxx
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-github me-1"></i>Code</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-link-45deg me-1"></i>DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 2 -->
+                    <div class="card pub-card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Microservices Architecture: Challenges and Solutions</h3>
+                            <p class="text-muted"><i class="bi bi-calendar me-2"></i>Published: October 2023 | <i class="bi bi-journal me-2"></i>ICSE Proceedings</p>
+                            <p class="card-text">Our research identifies common architectural anti-patterns in microservices implementations and proposes a framework for evaluating service boundaries. The paper includes case studies from three enterprise-scale deployments.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Microservices</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Architecture</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Distributed Systems</span>
+                            </div>
+                            <div class="citation mb-3">
+                                Unay, M., & Smith, J. (2023). Microservices Architecture: Challenges and Solutions. <em>Proceedings of the International Conference on Software Engineering</em>, 112-129. https://doi.org/xxxxx
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-slides me-1"></i>Slides</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-link-45deg me-1"></i>DOI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 3 -->
+                    <div class="card pub-card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Machine Learning in Web Security</h3>
+                            <p class="text-muted"><i class="bi bi-calendar me-2"></i>Published: March 2022 | <i class="bi bi-journal me-2"></i>Cybersecurity Today</p>
+                            <p class="card-text">This paper evaluates machine learning approaches for detecting XSS and CSRF attacks in real-time. We present a comparative analysis of three different models and their implementation considerations for production environments.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Machine Learning</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">Web Security</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary">XSS Detection</span>
+                            </div>
+                            <div class="citation mb-3">
+                                Unay, M. (2022). Machine Learning in Web Security. <em>Cybersecurity Today</em>, 8(4), 22-39. https://doi.org/xxxxx
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-database me-1"></i>Dataset</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-link-45deg me-1"></i>DOI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-funnel me-2"></i>Filter Publications</h4>
+                            <div class="mb-3">
+                                <label for="pubType" class="form-label">Type</label>
+                                <select class="form-select" id="pubType">
+                                    <option selected>All Publications</option>
+                                    <option>Journal Articles</option>
+                                    <option>Conference Papers</option>
+                                    <option>Technical Reports</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pubYear" class="form-label">Year</label>
+                                <select class="form-select" id="pubYear">
+                                    <option selected>All Years</option>
+                                    <option>2024</option>
+                                    <option>2023</option>
+                                    <option>2022</option>
+                                    <option>2021</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Topics</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="reactCheck">
+                                    <label class="form-check-label" for="reactCheck">React</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="architectureCheck">
+                                    <label class="form-check-label" for="architectureCheck">Architecture</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="securityCheck">
+                                    <label class="form-check-label" for="securityCheck">Security</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="performanceCheck">
+                                    <label class="form-check-label" for="performanceCheck">Performance</label>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary w-100">Apply Filters</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="bi bi-bar-chart me-2"></i>Publication Stats</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Total Publications
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Journal Articles
+                                    <span class="badge bg-primary rounded-pill">8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Conference Papers
+                                    <span class="badge bg-primary rounded-pill">5</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Citations
+                                    <span class="badge bg-primary rounded-pill">127</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Mazlum Unay. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+                    <a href="https://github.com/mazlumunay" class="social-icon mx-2"><i class="bi bi-github fs-4"></i></a>
+                    <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2"><i class="bi bi-envelope fs-4"></i></a>
+                    <a href="https://www.instagram.com/mazyy47/" class="social-icon mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
