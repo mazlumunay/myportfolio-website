@@ -133,71 +133,52 @@
                     </div>
                 </div>
 
-                <!-- Publication List -->
-                <div class="col-lg-8">
-                    <!-- Publication 1 -->
-                    <div class="card pub-card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">Optimizing React Performance with Memoization Techniques</h3>
-                            <p class="text-muted"><i class="bi bi-calendar me-2"></i>Published: May 2024 | <i class="bi bi-journal me-2"></i>Journal of Web Development</p>
-                            <p class="card-text">This paper presents a systematic approach to performance optimization in React applications through strategic memoization. We introduce a novel benchmarking methodology and demonstrate performance improvements of up to 40% in real-world applications.</p>
-                            <div class="d-flex flex-wrap gap-2 mb-3">
-                                <span class="badge bg-primary bg-opacity-10 text-primary">React</span>
-                                <span class="badge bg-primary bg-opacity-10 text-primary">Performance</span>
-                                <span class="badge bg-primary bg-opacity-10 text-primary">Memoization</span>
-                            </div>
-                            <div class="citation mb-3">
-                                Unay, M. (2024). Optimizing React Performance with Memoization Techniques. <em>Journal of Web Development</em>, 15(2), 45-67. https://doi.org/xxxxx
-                            </div>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-github me-1"></i>Code</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-link-45deg me-1"></i>DOI</a>
-                            </div>
+                <div class="card pub-card mb-4 border-0 shadow-sm" id="all-publications">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h3 class="card-title mb-0">Optimizing React Performance with Memoization Techniques</h3>
+                            <span class="badge bg-success bg-opacity-10 text-success fs-6">Most Cited</span>
                         </div>
-                    </div>
-
-                    <!-- Publication 2 -->
-                    <div class="card pub-card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">Microservices Architecture: Challenges and Solutions</h3>
-                            <p class="text-muted"><i class="bi bi-calendar me-2"></i>Published: October 2023 | <i class="bi bi-journal me-2"></i>ICSE Proceedings</p>
-                            <p class="card-text">Our research identifies common architectural anti-patterns in microservices implementations and proposes a framework for evaluating service boundaries. The paper includes case studies from three enterprise-scale deployments.</p>
-                            <div class="d-flex flex-wrap gap-2 mb-3">
-                                <span class="badge bg-primary bg-opacity-10 text-primary">Microservices</span>
-                                <span class="badge bg-primary bg-opacity-10 text-primary">Architecture</span>
-                                <span class="badge bg-primary bg-opacity-10 text-primary">Distributed Systems</span>
-                            </div>
-                            <div class="citation mb-3">
-                                Unay, M., & Smith, J. (2023). Microservices Architecture: Challenges and Solutions. <em>Proceedings of the International Conference on Software Engineering</em>, 112-129. https://doi.org/xxxxx
-                            </div>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-slides me-1"></i>Slides</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-link-45deg me-1"></i>DOI</a>
-                            </div>
+                        
+                        <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                            <span class="text-muted"><i class="bi bi-person me-1"></i>Mazlum Unay</span>
+                            <span class="text-muted"><i class="bi bi-calendar me-1"></i>May 2024</span>
+                            <span class="text-muted"><i class="bi bi-journal me-1"></i>Journal of Web Development</span>
+                            <span class="text-muted"><i class="bi bi-bar-chart me-1"></i>Citations: 42</span>
                         </div>
-                    </div>
-
-                    <!-- Publication 3 -->
-                    <div class="card pub-card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">Machine Learning in Web Security</h3>
-                            <p class="text-muted"><i class="bi bi-calendar me-2"></i>Published: March 2022 | <i class="bi bi-journal me-2"></i>Cybersecurity Today</p>
-                            <p class="card-text">This paper evaluates machine learning approaches for detecting XSS and CSRF attacks in real-time. We present a comparative analysis of three different models and their implementation considerations for production environments.</p>
-                            <div class="d-flex flex-wrap gap-2 mb-3">
-                                <span class="badge bg-primary bg-opacity-10 text-primary">Machine Learning</span>
-                                <span class="badge bg-primary bg-opacity-10 text-primary">Web Security</span>
-                                <span class="badge bg-primary bg-opacity-10 text-primary">XSS Detection</span>
-                            </div>
-                            <div class="citation mb-3">
-                                Unay, M. (2022). Machine Learning in Web Security. <em>Cybersecurity Today</em>, 8(4), 22-39. https://doi.org/xxxxx
-                            </div>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a href="#" class="btn btn-sm btn-primary"><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-database me-1"></i>Dataset</a>
-                                <a href="#" class="btn btn-sm btn-outline-primary"><i class="bi bi-link-45deg me-1"></i>DOI</a>
-                            </div>
+                        
+                        <p class="card-text mb-3">This paper presents a systematic approach to performance optimization in React applications through strategic memoization. We introduce a novel benchmarking methodology and demonstrate performance improvements of up to 40% in real-world applications.</p>
+                        
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-10">
+                                <i class="bi bi-speedometer2 me-1"></i>Performance
+                            </span>
+                            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-10">
+                                <i class="bi bi-diagram-3 me-1"></i>React
+                            </span>
+                            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-10">
+                                <i class="bi bi-lightning-charge me-1"></i>Optimization
+                            </span>
+                        </div>
+                        
+                        <div class="citation p-3 mb-3 bg-light rounded-2">
+                            <small class="text-muted d-block mb-1">APA Citation:</small>
+                            Unay, M. (2024). Optimizing React Performance with Memoization Techniques. <em>Journal of Web Development</em>, 15(2), 45-67. https://doi.org/xxxxx
+                        </div>
+                        
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#" class="btn btn-sm btn-primary px-3">
+                                <i class="bi bi-file-earmark-pdf me-1"></i>PDF
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-primary px-3">
+                                <i class="bi bi-github me-1"></i>Code
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-primary px-3">
+                                <i class="bi bi-link-45deg me-1"></i>DOI
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-primary px-3">
+                                <i class="bi bi-slides me-1"></i>Slides
+                            </a>
                         </div>
                     </div>
                 </div>
