@@ -185,71 +185,77 @@
 
                 <!-- Sidebar -->
                 <div class="col-lg-4">
+                    <!-- Simple Filter Card -->
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h4 class="card-title"><i class="bi bi-funnel me-2"></i>Filter Publications</h4>
+                            <h5 class="card-title mb-3">
+                                <i class="bi bi-funnel me-2"></i>Filter
+                            </h5>
+                            
+                            <!-- Search -->
                             <div class="mb-3">
-                                <label for="pubType" class="form-label">Type</label>
-                                <select class="form-select" id="pubType">
-                                    <option selected>All Publications</option>
+                                <label class="form-label">Search</label>
+                                <input type="text" class="form-control" placeholder="Title, author...">
+                            </div>
+                            
+                            <!-- Type -->
+                            <div class="mb-3">
+                                <label class="form-label">Type</label>
+                                <select class="form-select">
+                                    <option selected>All Types</option>
                                     <option>Journal Articles</option>
                                     <option>Conference Papers</option>
                                     <option>Technical Reports</option>
                                 </select>
                             </div>
+                            
+                            <!-- Year -->
                             <div class="mb-3">
-                                <label for="pubYear" class="form-label">Year</label>
-                                <select class="form-select" id="pubYear">
+                                <label class="form-label">Year</label>
+                                <select class="form-select">
                                     <option selected>All Years</option>
                                     <option>2024</option>
                                     <option>2023</option>
                                     <option>2022</option>
-                                    <option>2021</option>
                                 </select>
                             </div>
+                            
+                            <!-- Topics -->
                             <div class="mb-3">
                                 <label class="form-label">Topics</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="reactCheck">
-                                    <label class="form-check-label" for="reactCheck">React</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="architectureCheck">
-                                    <label class="form-check-label" for="architectureCheck">Architecture</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="securityCheck">
-                                    <label class="form-check-label" for="securityCheck">Security</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="performanceCheck">
-                                    <label class="form-check-label" for="performanceCheck">Performance</label>
+                                <div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="reactCheck">
+                                        <label class="form-check-label" for="reactCheck">React</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="architectureCheck">
+                                        <label class="form-check-label" for="architectureCheck">Architecture</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="securityCheck">
+                                        <label class="form-check-label" for="securityCheck">Security</label>
+                                    </div>
                                 </div>
                             </div>
-                            <button class="btn btn-outline-primary w-100">Apply Filters</button>
+                            
+                            <button class="btn btn-primary w-100 mt-2">
+                                Apply Filters
+                            </button>
                         </div>
                     </div>
-
+                    
+                    <!-- Simple Stats Card -->
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title"><i class="bi bi-bar-chart me-2"></i>Publication Stats</h4>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Total Publications
-                                    <span class="badge bg-primary rounded-pill">14</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Journal Articles
-                                    <span class="badge bg-primary rounded-pill">8</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Conference Papers
-                                    <span class="badge bg-primary rounded-pill">5</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Citations
-                                    <span class="badge bg-primary rounded-pill">127</span>
-                                </li>
+                            <h5 class="card-title mb-3">
+                                <i class="bi bi-bar-chart me-2"></i>Stats
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">Total Publications: <strong>27</strong></li>
+                                <li class="mb-2">Journal Articles: <strong>15</strong></li>
+                                <li class="mb-2">Conference Papers: <strong>9</strong></li>
+                                <li>Citations: <strong>428</strong></li>
                             </ul>
                         </div>
                     </div>
