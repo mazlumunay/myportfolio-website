@@ -390,3 +390,70 @@ body {
 .bi-journal-text {
   opacity: 0.8;
 }
+
+.pub-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/publication-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+.pub-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--bs-primary);
+  overflow: hidden;
+}
+.pub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.citation {
+  font-family: 'Courier New', monospace;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.pub-header {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.8), rgba(111, 66, 193, 0.8)), 
+              url('../img/publication-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.pub-card {
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--bs-primary);
+  overflow: hidden;
+}
+
+.pub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.citation {
+  font-family: 'Courier New', monospace;
+  background-color: rgba(13, 110, 253, 0.05);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border-left: 3px solid var(--bs-primary);
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pub-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.pub-card:nth-child(1) { animation-delay: 0.1s; }
+.pub-card:nth-child(2) { animation-delay: 0.2s; }
+.pub-card:nth-child(3) { animation-delay: 0.3s; }
