@@ -65,10 +65,23 @@
     </nav>
 
     <!-- Publication Header -->
-    <header class="pub-header d-flex align-items-center text-white">
+    <header class="pub-header d-flex align-items-center text-white position-relative">
         <div class="container py-5 text-center">
-            <h1 class="display-3 fw-bold mb-3">Publications</h1>
-            <p class="lead mb-0">Academic contributions and technical writings</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown">Publications</h1>
+                    <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s">Academic contributions and technical writings that advance the field</p>
+                    <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeIn animate__delay-2s">
+                        <a href="#featured" class="btn btn-primary btn-lg px-4">Featured Work</a>
+                        <a href="#all-publications" class="btn btn-outline-light btn-lg px-4">Browse All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute bottom-0 start-0 end-0 text-center pb-3">
+            <a href="#featured" class="text-white fs-1 animate__animated animate__bounce animate__infinite animate__slow">
+                <i class="bi bi-chevron-down"></i>
+            </a>
         </div>
     </header>
 
