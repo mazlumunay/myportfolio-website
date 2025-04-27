@@ -1,11 +1,10 @@
 /* =============================================
    GLOBAL STYLES & VARIABLES
    ============================================= */
-
    :root {
     /* Color Variables */
     --primary-dark: #212529;
-    --primary-gradient: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    --primary-light: #f8f9fa;
     --accent-color: #4ca1af;
     --text-light: #ffffff;
     --text-muted: #e9ecef;
@@ -17,17 +16,22 @@
   /* =============================================
      BASE STYLES
      ============================================= */
-  
   body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-image: url('https://bloximages.newyork1.vip.townnews.com/lancasterfarming.com/content/tncms/assets/v3/editorial/b/94/b94fcab6-9e20-11ec-b283-e33a585b3655/622612f8a7e74.image.jpg');
+    /* Professional layered background */
+    background: 
+      linear-gradient(rgba(15, 23, 42, 0.92), 
+      rgba(15, 23, 42, 0.92)),
+      url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') 
+      no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    /* Smooth font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   /* Smooth scrolling */
@@ -38,11 +42,11 @@
   /* =============================================
      TYPOGRAPHY
      ============================================= */
-  
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
+    color: var(--text-light);
   }
   
   .display-3 {
@@ -52,12 +56,58 @@
   .lead {
     font-weight: 400;
     opacity: 0.9;
+    color: var(--text-muted);
+  }
+  
+  /* =============================================
+     LAYOUT COMPONENTS
+     ============================================= */
+  /* Background overlay for all pages */
+  .page-background {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .page-background::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(rgba(15, 23, 42, 0.92), 
+      rgba(15, 23, 42, 0.92)),
+      url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') 
+      no-repeat center center;
+    background-size: cover;
+    z-index: -2;
+  }
+  
+  .page-background::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.92);
+    z-index: -1;
+  }
+  
+  /* Content container */
+  .content-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    margin: 2rem auto;
+    padding: 2rem;
+    position: relative;
   }
   
   /* =============================================
      COMPONENT STYLES
      ============================================= */
-  
   /* Navigation */
   .navbar {
     background-color: var(--primary-dark);
@@ -86,20 +136,23 @@
   }
   
   /* Cards */
-  .project-card {
+  .card {
     transition: var(--transition-base);
     border: none;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-sm);
     overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .project-card {
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
   }
   
   .card-body {
@@ -152,10 +205,34 @@
   
   /* GitHub Section */
   .github-section {
-    background: #111;
+    background: var(--primary-dark);
     border-radius: 0.5rem;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    transition: var(--transition-base);
+  }
+  
+  .github-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Publications */
+  .publication-card {
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  .pub-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-color);
+    overflow: hidden;
+  }
+  
+  .pub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
   }
   
   /* Footer */
@@ -180,27 +257,33 @@
   /* =============================================
      UTILITY CLASSES
      ============================================= */
-  
-  .hover-scale {
-    transition: var(--transition-base);
-  }
-  
-  .hover-scale:hover {
-    transform: scale(1.03);
-  }
-  
-  .min-vh-100 {
-    min-height: 100vh;
-  }
-  
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-accent {
+    color: var(--accent-color);
+  }
+  
+  .bg-dark-2 {
+    background-color: #1a1e21;
+  }
+  
+  /* =============================================
+     ANIMATIONS
+     ============================================= */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
   }
   
   /* =============================================
      MEDIA QUERIES (Responsive Adjustments)
      ============================================= */
-  
   @media (max-width: 768px) {
     .display-3 {
       font-size: 2.5rem;
@@ -214,6 +297,10 @@
       padding: 0.5rem 1rem;
       font-size: 1rem;
     }
+    
+    .github-stats-container {
+      flex-direction: column;
+    }
   }
   
   @media (max-width: 576px) {
@@ -224,259 +311,8 @@
     .project-card {
       margin-bottom: 1.5rem;
     }
-  }
-
-
-  /* =============================================
-   PROFESSIONAL BACKGROUND STYLES
-   ============================================= */
-body {
-  /* Professional layered background */
-  background: 
-    linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)),
-    url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') 
-    no-repeat center center fixed;
-  background-size: cover;
-  background-attachment: fixed;
-  
-  /* Improved text readability */
-  color: #e2e8f0;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  
-  /* Smooth font rendering */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Adjust hero overlay to complement new background */
-.hero-overlay {
-  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9));
-}
-
-
-/* =============================================
-   GITHUB SECTION - PROFESSIONAL STYLING
-   ============================================= */
-
-   .github-section {
-    background: var(--primary-dark); /* Using your existing dark color variable */
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    transition: var(--transition-base);
-  }
-  
-  .github-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-  }
-  
-  .github-section h2 {
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .github-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: var(--accent-color);
-  }
-  
-  .github-section p.lead {
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-  }
-  
-  /* GitHub stats images */
-  .github-section img {
-    border-radius: 0.25rem;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 0.5rem;
-    transition: var(--transition-base);
-  }
-  
-  .github-section img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(76, 161, 175, 0.3);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .github-section {
+    
+    .content-container {
       padding: 1.5rem;
     }
-    
-    .github-stats-container {
-      flex-direction: column;
-    }
-    
-    .github-section img {
-      margin-bottom: 1rem;
-      width: 100%;
-    }
   }
-
-  /* Publications Section Styles */
-.publication-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.publication-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.publication-card .card-body {
-  padding: 2rem;
-}
-
-.publication-card .card-title {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-  color: #2c3e50;
-}
-
-.publication-card .text-muted {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-.publication-card .text-muted i {
-  margin-right: 8px;
-}
-
-.publication-card .card-text {
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-.publication-card .badge {
-  font-weight: 500;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-}
-
-/* Custom background shades */
-.bg-dark-2 {
-  background-color: #1a1e21;
-  transition: all 0.3s ease;
-}
-
-/* Publication card hover effect */
-.bg-dark-2:hover {
-  background-color: #212529;
-  transform: translateY(-3px);
-}
-
-/* Text contrast improvements */
-.text-light {
-  opacity: 0.9;
-}
-
-/* Icon styling */
-.bi-journal-text {
-  opacity: 0.8;
-}
-
-.pub-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/publication-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-}
-.pub-card {
-  transition: all 0.3s ease;
-  border-left: 4px solid var(--bs-primary);
-  overflow: hidden;
-}
-.pub-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.citation {
-  font-family: 'Courier New', monospace;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.pub-header {
-  background: linear-gradient(135deg, rgba(13, 110, 253, 0.8), rgba(111, 66, 193, 0.8)), 
-              url('../img/publication-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-}
-
-.pub-card {
-  transition: all 0.3s ease;
-  border-radius: 0.5rem;
-  border-left: 4px solid var(--bs-primary);
-  overflow: hidden;
-}
-
-.pub-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-}
-
-.citation {
-  font-family: 'Courier New', monospace;
-  background-color: rgba(13, 110, 253, 0.05);
-  padding: 1rem;
-  border-radius: 0.25rem;
-  border-left: 3px solid var(--bs-primary);
-}
-
-/* Animation for cards */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.pub-card {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.pub-card:nth-child(1) { animation-delay: 0.1s; }
-.pub-card:nth-child(2) { animation-delay: 0.2s; }
-.pub-card:nth-child(3) { animation-delay: 0.3s; }
-
-/* Projects Page Specific Styles */
-.projects-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  min-height: 60vh;
-}
-
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.project-card .card-footer {
-  background-color: rgba(0, 0, 0, 0.03);
-}
