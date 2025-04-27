@@ -191,71 +191,58 @@
                 </div>
 
                 <!-- Sidebar -->
-                <div class="col-lg-4">
-                    <!-- Simple Filter Card -->
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">
-                                <i class="bi bi-funnel me-2"></i>Filter
-                            </h5>
-                            
-                            <!-- Search -->
-                            <div class="mb-3">
-                                <label class="form-label">Search</label>
-                                <input type="text" class="form-control" placeholder="Title, author...">
-                            </div>
-                            
-                            <!-- Type -->
-                            <div class="mb-3">
-                                <label class="form-label">Type</label>
-                                <select class="form-select">
-                                    <option selected>All Types</option>
-                                    <option>Journal Articles</option>
-                                    <option>Conference Papers</option>
-                                    <option>Technical Reports</option>
-                                </select>
-                            </div>
-                            
-                            <!-- Year -->
-                            <select class="form-select">
-                                <option selected>All Years</option>
-                                <option>2021</option>
-                                <option>2020</option>
-                                <option>2019</option>
-                                <option>2018</option>
-                            </select>
-                            
-                            <!-- Topics -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="medicalCheck">
-                                <label class="form-check-label" for="medicalCheck">Medical Technology</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="imageCheck">
-                                <label class="form-check-label" for="imageCheck">Image Processing</label>
-                            </div>
-                            
-                            <button class="btn btn-primary w-100 mt-2">
-                                Apply Filters
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Simple Stats Card -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">
-                                <i class="bi bi-bar-chart me-2"></i>Stats
-                            </h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2">Total Publications: <strong>6</strong></li>
-                                <li class="mb-2">Conference Papers: <strong>5</strong></li>
-                                <li class="mb-2">Theses: <strong>1</strong></li>
-                                <li>Total Citations: <strong>50+</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <!-- Stats and Filter Section -->
+<div class="container mb-5">
+    <div class="row g-4">
+      <!-- Simple Stats Card -->
+      <div class="col-md-6">
+        <div class="card shadow-sm rounded bg-light p-4 h-100">
+          <h4 class="fw-bold mb-3">At a Glance</h4>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <i class="bi bi-file-earmark-text me-2 text-primary"></i> Total Publications: <strong>7</strong>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-bar-chart-line me-2 text-primary"></i> Total Citations: <strong>90+</strong>
+            </li>
+            <li>
+              <i class="bi bi-calendar-event me-2 text-primary"></i> First Publication: <strong>2018</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Filter -->
+      <div class="col-md-6">
+        <div class="card shadow-sm rounded bg-light p-4 h-100">
+          <h4 class="fw-bold mb-3">Filter Publications</h4>
+          <form>
+            <div class="mb-3">
+              <label for="yearFilter" class="form-label">Year</label>
+              <select id="yearFilter" class="form-select">
+                <option selected>All Years</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="typeFilter" class="form-label">Type</label>
+              <select id="typeFilter" class="form-select">
+                <option selected>All Types</option>
+                <option>Conference</option>
+                <option>Journal</option>
+                <option>Thesis</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Apply Filter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
             </div>
         </div>
     </main>
