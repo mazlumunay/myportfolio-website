@@ -395,3 +395,27 @@
 .zoom-hover:hover {
   transform: scale(1.03);
 }
+
+
+/* Dark theme enhancements */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.form-control, .form-select {
+  background-color: #343a40;
+  color: white;
+  border-color: #495057;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #343a40;
+  color: white;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
