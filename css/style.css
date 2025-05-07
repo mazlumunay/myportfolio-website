@@ -508,3 +508,45 @@
 .progress-bar {
   border-radius: 3px;
 }
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: #FFD369;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-link {
+  margin-right: 1em;
+  color: #EEEEEE;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00bcd4;
+}
+
+.nav-link.active {
+  color: #00bcd4; /* Highlight active link */
+}
+
+.dropdown-menu {
+  background-color: #333;
+  border: none;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+      margin-right: 2rem;
+  }
+}
