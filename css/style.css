@@ -550,3 +550,25 @@
       margin-right: 2rem;
   }
 }
+
+/* Add these styles to your stylesheet */
+.bg-glass {
+  background: rgba(15, 23, 42, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.bg-glass-dark {
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(135deg, rgba(9,9,121,0.1) 0%, rgba(0,212,255,0.05) 100%);
+}
+
+.border-light-10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+}
