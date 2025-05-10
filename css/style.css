@@ -572,3 +572,19 @@
 .shadow-soft-lg {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
 }
+
+/* Add this to match index.html background */
+.hero-overlay-dark {
+  background: linear-gradient(rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.7));
+}
+
+/* Background for main content */
+.bg-dark-content {
+  background: 
+    linear-gradient(rgba(15, 23, 42, 0.92), 
+    rgba(15, 23, 42, 0.92)),
+    url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') 
+    no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
