@@ -1060,3 +1060,109 @@ body.contact-page {
     padding: 3rem 0;
   }
 }
+
+/* =============================================
+   TRANSPARENT CTA SECTION STYLES
+   ============================================= */
+   .cta-transparent {
+    background: transparent;
+    color: var(--text-light);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-transparent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.15);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
+  }
+  
+  .cta-transparent .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta-transparent h2 {
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .cta-transparent .lead {
+    color: var(--text-light);
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+  }
+  
+  .cta-transparent .btn-primary {
+    background-color: var(--text-light);
+    border-color: var(--text-light);
+    color: var(--primary-dark);
+    font-weight: 500;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: var(--transition-base);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cta-transparent .btn-primary:hover {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .cta-transparent .btn-outline-light {
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+    background-color: transparent;
+    font-weight: 500;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: var(--transition-base);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cta-transparent .btn-outline-light:hover {
+    background-color: var(--text-light);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cta-transparent {
+      padding: 3rem 0;
+    }
+    
+    .cta-transparent .btn-primary,
+    .cta-transparent .btn-outline-light {
+      padding: 10px 25px;
+      font-size: 0.95rem;
+    }
+    
+    .cta-transparent .d-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-transparent .btn {
+      margin-bottom: 0.75rem;
+      width: 100%;
+      max-width: 250px;
+    }
+  }

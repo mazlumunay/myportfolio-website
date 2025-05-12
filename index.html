@@ -30,7 +30,13 @@
   </head>
   <body>
     <!--  NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background-color: rgba(34, 40, 49, 0.98); backdrop-filter: blur(5px);">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
+      style="
+        background-color: rgba(34, 40, 49, 0.98);
+        backdrop-filter: blur(5px);
+      "
+    >
       <div class="container">
         <!-- Logo and Brand Name (left side) -->
         <a class="navbar-brand d-flex align-items-center" href="../index.html">
@@ -40,7 +46,7 @@
             viewBox="0 0 120 120"
             xmlns="http://www.w3.org/2000/svg"
             class="d-inline-block me-2 transition-all"
-            style="transition: transform 0.3s ease;"
+            style="transition: transform 0.3s ease"
           >
             <rect width="120" height="120" rx="20" fill="#222831" />
             <text
@@ -55,9 +61,11 @@
               MU
             </text>
           </svg>
-          <span class="fw-bold text-uppercase d-none d-sm-inline">Mazlum Unay</span>
+          <span class="fw-bold text-uppercase d-none d-sm-inline"
+            >Mazlum Unay</span
+          >
         </a>
-    
+
         <!-- Toggler Button -->
         <button
           class="navbar-toggler border-0"
@@ -69,32 +77,47 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <!-- Navigation Links (right-aligned) -->
         <div class="collapse navbar-collapse" id="navbarRightAlign">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item mx-1">
-              <a class="nav-link position-relative px-3 py-2" href="./index.html">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="./index.html"
+              >
                 <span class="position-relative">Home</span>
               </a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link position-relative px-3 py-2" href="./public/projects.html">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="./public/projects.html"
+              >
                 <span class="position-relative">Projects</span>
               </a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link position-relative px-3 py-2" href="./public/publications.html">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="./public/publications.html"
+              >
                 <span class="position-relative">Publications</span>
               </a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link position-relative px-3 py-2" href="./public/about.html">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="./public/about.html"
+              >
                 <span class="position-relative">About</span>
               </a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link position-relative px-3 py-2" href="./public/contact.html">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="./public/contact.html"
+              >
                 <span class="position-relative">Contact</span>
               </a>
             </li>
@@ -531,17 +554,20 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-5 bg-gradient-primary text-white">
-      <div class="container py-5 text-center">
-        <h2 class="display-4 fw-bold mb-4">Ready to start a project?</h2>
-        <p class="lead mb-5">
-          I'm available for freelance work and full-time opportunities.
-        </p>
-        <a href="./public/contact.html" class="btn btn-light btn-lg px-5"
-          >Get In Touch</a
-        >
-      </div>
-    </section>
+<section class="cta-simple">
+  <div class="container py-5 text-center">
+    <h2 class="display-4 fw-bold mb-4">Ready to Start a Project?</h2>
+    <p class="lead mb-5">
+      I'm available for freelance work and full-time opportunities.
+    </p>
+    <div class="d-flex gap-3 justify-content-center">
+      <a href="./contact.html" class="btn btn-outline-light btn-lg px-5">
+        Get In Touch <i class="bi bi-chat-left-text ms-2"></i>
+      </a>
+
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer class="py-5">
