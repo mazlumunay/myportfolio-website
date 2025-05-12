@@ -1,379 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Mazlum Unay | Full Stack Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Mazlum Unay | Full Stack Developer</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css"/>
 
-    <!-- Favicon (using your SVG as icon) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%23222831'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>">
- 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
-        }
-        .navbar {
-            background-color: #212529;
-        }
-        .navbar-brand, .nav-link {
-            color: white !important;
-        }
-        .profile-header {
-            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
-            color: white;
-            padding: 3rem 0;
-            margin-bottom: 2rem;
-        }
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .section-title {
-            color: #2c3e50;
-            border-bottom: 2px solid #4ca1af;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .timeline {
-            position: relative;
-            padding-left: 50px;
-        }
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #4ca1af;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-        }
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: -38px;
-            top: 5px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #4ca1af;
-            border: 3px solid white;
-        }
-        .skill-badge {
-            background-color: #4ca1af;
-            color: white;
-            margin: 5px;
-            padding: 8px 15px;
-            border-radius: 20px;
-            display: inline-block;
-        }
-        .project-card {
-            transition: transform 0.3s;
-            margin-bottom: 20px;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: #212529;
-            color: white;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-    </style>
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%23222831'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    .navbar {
+      background-color: #212529;
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+    .profile-header {
+      background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+      color: white;
+      padding: 3rem 0;
+      margin-bottom: 2rem;
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      color: #2c3e50;
+      border-bottom: 2px solid #4ca1af;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 50px;
+    }
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #4ca1af;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: -38px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #4ca1af;
+      border: 3px solid white;
+    }
+    .skill-badge {
+      background-color: #4ca1af;
+      color: white;
+      margin: 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+    .social-icon {
+      color: white;
+      transition: color 0.3s;
+    }
+    .social-icon:hover {
+      color: #4ca1af;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <!-- Professional Navigation with Right-Aligned Links -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
-    >
-      <div class="container-fluid">
-        <!-- Logo and Brand Name (left side) -->
-        <a class="navbar-brand" href="../index.html">
-          <svg
-            width="36"
-            height="36"
-            viewBox="0 0 120 120"
-            xmlns="http://www.w3.org/2000/svg"
-            class="d-inline-block me-2"
-          >
-            <rect width="120" height="120" rx="20" fill="#222831" />
-            <text
-              x="50%"
-              y="50%"
-              dominant-baseline="middle"
-              text-anchor="middle"
-              font-size="48"
-              font-family="Arial, Helvetica, sans-serif"
-              fill="#FFD369"
-            >
-              MU
-            </text>
-          </svg>
-          <span class="fw-bold text-uppercase">Mazlum Unay</span>
-        </a>
 
-        <!-- Toggler Button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarRightAlign"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navigation Links (right-aligned) -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarRightAlign"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./publications.html"
-                >Publications</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <svg width="36" height="36" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="d-inline-block me-2">
+          <rect width="120" height="120" rx="20" fill="#222831"/>
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                font-size="48" font-family="Arial, Helvetica, sans-serif" fill="#FFD369">MU</text>
+        </svg>
+        <span class="fw-bold text-uppercase">Mazlum Unay</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="./publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
       </div>
-    </nav>
-
-    <!-- Profile Header -->
-    <div class="profile-header text-center">
-        <div class="container">
-            <h1>Mazlum Unay</h1>
-            <img src="../img/myphoto.jpg" alt="Mazlum Unay" class="profile-img rounded-circle mb-3">
-
-            <p class="lead">Full Stack Software Developer</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="https://www.linkedin.com/in/mazlumunay/" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
-                <a href="https://github.com/mazlumunay" class="text-white"><i class="bi bi-github fs-4"></i></a>
-                <a href="mailto:unaymazlum@gmail.com" class="text-white"><i class="bi bi-envelope fs-4"></i></a>
-            </div>
-        </div>
     </div>
+  </nav>
 
-    <!-- About Section -->
+  <!-- Profile Header -->
+  <div class="profile-header text-center">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">Professional Summary</h2>
-                <p class="lead">
-                    Detail-oriented and analytical Software Developer with a strong ability to learn and apply new technologies in real-world scenarios. 
-                    Proficient in both front-end and back-end development, with expertise in database management and modern web development principles.
-                </p>
-                <p>
-                    Adept at problem-solving and writing efficient, scalable code to drive innovative solutions. Experienced in fast-paced, collaborative 
-                    environments, successfully delivering projects from concept to completion. Passionate about bridging the gap between design and 
-                    functionality, ensuring seamless user experiences.
-                </p>
-                
-                <h2 class="section-title mt-5">Work Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Full Stack Software Developer</h4>
-                        <h5>Serpo Technology | Toronto, ON</h5>
-                        <p class="text-muted">Aug. 2024 – Present</p>
-                        <ul>
-                            <li>Collaborated with cross-functional teams to design and implement RESTful APIs</li>
-                            <li>Integrated third-party APIs to enhance application functionality</li>
-                            <li>Continuously updated skillset through professional development</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h4>Full Stack Software Developer</h4>
-                        <h5>Lambton College | Toronto, ON</h5>
-                        <p class="text-muted">May 2023 – Aug. 2024</p>
-                        <ul>
-                            <li>Solved complex technical challenges using various programming languages</li>
-                            <li>Identified and resolved defects, increasing application stability</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h4>Software Engineer</h4>
-                        <h5>Katip Celebi University | Izmir, TR</h5>
-                        <p class="text-muted">Apr. 2018 – Apr. 2023</p>
-                        <ul>
-                            <li>Developed scalable and maintainable code</li>
-                            <li>Integrated new technologies into existing systems</li>
-                            <li>Created reusable components reducing development effort</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <h2 class="section-title mt-5">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Graduate Certificate in Full Stack Software Development</h4>
-                        <h5>Lambton College | Toronto, ON</h5>
-                        <p class="text-muted">Graduation Dean's Honor List</p>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h4>Master of Science in Electrical and Electronics Engineering</h4>
-                        <h5>Dokuz Eylul University | Izmir, TR</h5>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h4>Bachelor's Degree in Electrical and Electronics Engineering</h4>
-                        <h5>Dokuz Eylul University | Izmir, TR</h5>
-                    </div>
-                </div>
-                
-                <!-- Add this in your <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<h2 class="section-title mt-5">Technical Skills</h2>
-
-<div class="mb-4">
-    <h5>Languages</h5>
-    <div>
-        <span class="skill-badge"><i class="fab fa-java"></i> Java</span>
-        <span class="skill-badge"><i class="fab fa-cuttlefish"></i> C#</span>
-        <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
-        <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
-        <span class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</span>
-        <span class="skill-badge"><i class="fas fa-code"></i> TypeScript</span>
-        <span class="skill-badge"><i class="fab fa-html5"></i> HTML</span>
-        <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS</span>
-    </div>
-</div>
-
-<div class="mb-4">
-    <h5>Frameworks &amp; Libraries</h5>
-    <div>
-        <span class="skill-badge"><i class="fab fa-react"></i> React.js</span>
-        <span class="skill-badge"><i class="fab fa-node"></i> Node.js</span>
-        <span class="skill-badge"><i class="fab fa-neos"></i> Next.js</span>
-        <span class="skill-badge"><i class="fab fa-python"></i> Django</span>
-        <span class="skill-badge"><i class="fab fa-java"></i> Spring</span>
-        <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-    </div>
-</div>
-
-<div class="mb-4">
-    <h5>Tools &amp; Technologies</h5>
-    <div>
-        <span class="skill-badge"><i class="fab fa-git-alt"></i> Git</span>
-        <span class="skill-badge"><i class="fab fa-docker"></i> Docker</span>
-        <span class="skill-badge"><i class="fas fa-cogs"></i> Jenkins</span>
-        <span class="skill-badge"><i class="fab fa-microsoft"></i> Microsoft Azure</span>
-        <span class="skill-badge"><i class="fab fa-jira"></i> JIRA</span>
-        <span class="skill-badge"><i class="fas fa-users"></i> Agile</span>
-    </div>
-</div>
-
-<div class="mb-4">
-    <h5>Databases</h5>
-    <div>
-        <span class="skill-badge"><i class="fas fa-database"></i> SQL Server</span>
-        <span class="skill-badge"><i class="fas fa-database"></i> MySQL</span>
-        <span class="skill-badge"><i class="fas fa-database"></i> PostgreSQL</span>
-        <span class="skill-badge"><i class="fas fa-database"></i> Oracle</span>
-        <span class="skill-badge"><i class="fas fa-database"></i> MongoDB</span>
-    </div>
-</div>
-
-<div class="mb-4">
-    <h5>Developer Tools</h5>
-    <div>
-        <span class="skill-badge"><i class="fas fa-code"></i> PyCharm</span>
-        <span class="skill-badge"><i class="fas fa-code"></i> IntelliJ</span>
-        <span class="skill-badge"><i class="fas fa-code"></i> Eclipse</span>
-    </div>
-</div>
-
-<div class="mb-4">
-    <h5>Libraries</h5>
-    <div>
-        <span class="skill-badge"><i class="fas fa-chart-bar"></i> pandas</span>
-        <span class="skill-badge"><i class="fas fa-chart-line"></i> NumPy</span>
-        <span class="skill-badge"><i class="fas fa-chart-pie"></i> Matplotlib</span>
-    </div>
-</div>
-
-<div class="mb-4">
-    <h5>Other Skills</h5>
-    <div>
-        <span class="skill-badge"><i class="fas fa-cubes"></i> Object-oriented programming</span>
-        <span class="skill-badge"><i class="fas fa-plug"></i> API design and integration</span>
-        <span class="skill-badge"><i class="fas fa-desktop"></i> Front-end development</span>
-        <span class="skill-badge"><i class="fas fa-layer-group"></i> Full-stack development</span>
-        <span class="skill-badge"><i class="fas fa-globe"></i> Web application development</span>
-        <span class="skill-badge"><i class="fas fa-cloud"></i> Cloud computing</span>
-    </div>
-</div>
-
-    
-
-    <!-- Contact Section -->
-    <div id="contact" class="bg-light mt-5 py-5">
-        <div class="container">
-            <h2 class="section-title text-center">Get In Touch</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <p class="lead">I'm always interested in hearing about new projects and opportunities.</p>
-                    <div class="d-flex justify-content-center gap-3 mb-4">
-                        <a href="https://www.linkedin.com/in/mazlumunay/" class="btn btn-outline-dark">
-                            <i class="bi bi-linkedin me-2"></i>LinkedIn
-                        </a>
-                        <a href="mailto:unaymazlum@gmail.com" class="btn btn-outline-dark">
-                            <i class="bi bi-envelope me-2"></i>Email
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="py-5">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 text-center text-md-start">
-                  <p class="mb-0">&copy; 2025 Mazlum Unay. All rights reserved.</p>
-              </div>
-              <div class="col-md-6 text-center text-md-end">
-                  <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon mx-2"><i class="bi bi-linkedin fs-4"></i></a>
-                  <a href="https://github.com/mazlumunay" class="social-icon mx-2"><i class="bi bi-github fs-4"></i></a>
-                  <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2"><i class="bi bi-envelope fs-4"></i></a>
-                  <a href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en" class="social-icon mx-2"><i class="bi bi-google fs-4"></i></a>
-                  <a href="https://www.researchgate.net/profile/Mazlum-Unay" class="social-icon mx-2"><i class="bi bi-mortarboard fs-4"></i></a>                    <a href="https://www.instagram.com/mazyy47/" class="social-icon mx-2"><i class="bi bi-instagram fs-4"></i></a>
-                </div>
-          </div>
+      <h1>Mazlum Unay</h1>
+      <img src="../img/myphoto.jpg" alt="Mazlum Unay" class="profile-img rounded-circle mb-3">
+      <p class="lead">Full Stack Software Developer</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="https://www.linkedin.com/in/mazlumunay/" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+        <a href="https://github.com/mazlumunay" class="text-white"><i class="bi bi-github fs-4"></i></a>
+        <a href="mailto:unaymazlum@gmail.com" class="text-white"><i class="bi bi-envelope fs-4"></i></a>
       </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+
+        <!-- Professional Summary -->
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="lead">
+          Detail-oriented and analytical Software Developer with a strong ability to learn and apply new technologies in real-world scenarios.
+          Proficient in both front-end and back-end development, with expertise in database management and modern web development principles.
+        </p>
+        <p>
+          Adept at problem-solving and writing efficient, scalable code to drive innovative solutions. Experienced in fast-paced, collaborative
+          environments, successfully delivering projects from concept to completion. Passionate about bridging the gap between design and
+          functionality, ensuring seamless user experiences.
+        </p>
+
+        <!-- Work Experience -->
+        <h2 class="section-title mt-5">Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Full Stack Software Developer</h4>
+            <h5>Serpo Technology | Toronto, ON</h5>
+            <p class="text-muted">Aug. 2024 – Present</p>
+            <ul>
+              <li>Collaborated with cross-functional teams to design and implement RESTful APIs</li>
+              <li>Integrated third-party APIs to enhance application functionality</li>
+              <li>Continuously updated skillset through professional development</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h4>Full Stack Software Developer</h4>
+            <h5>Lambton College | Toronto, ON</h5>
+            <p class="text-muted">May 2023 – Aug. 2024</p>
+            <ul>
+              <li>Solved complex technical challenges using various programming languages</li>
+              <li>Identified and resolved defects, increasing application stability</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h4>Software Engineer</h4>
+            <h5>Katip Çelebi University | İzmir, TR</h5>
+            <p class="text-muted">Apr. 2018 – Apr. 2023</p>
+            <ul>
+              <li>Developed scalable and maintainable code</li>
+              <li>Integrated new technologies into existing systems</li>
+              <li>Created reusable components reducing development effort</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <h2 class="section-title mt-5">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Graduate Certificate in Full Stack Software Development</h4>
+            <h5>Lambton College | Toronto, ON</h5>
+            <p class="text-muted">Graduation Dean's Honor List</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Master of Science in Electrical and Electronics Engineering</h4>
+            <h5>Dokuz Eylul University | İzmir, TR</h5>
+          </div>
+          <div class="timeline-item">
+            <h4>Bachelor's Degree in Electrical and Electronics Engineering</h4>
+            <h5>Dokuz Eylul University | İzmir, TR</h5>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <h2 class="section-title mt-5">Technical Skills</h2>
+
+        <div class="mb-4">
+          <h5>Languages</h5>
+          <div>
+            <span class="skill-badge"><i class="fab fa-java"></i> Java</span>
+            <span class="skill-badge"><i class="fab fa-cuttlefish"></i> C#</span>
+            <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
+            <span class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</span>
+            <span class="skill-badge"><i class="fas fa-code"></i> TypeScript</span>
+            <span class="skill-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h5>Frameworks &amp; Libraries</h5>
+          <div>
+            <span class="skill-badge"><i class="fab fa-react"></i> React.js</span>
+            <span class="skill-badge"><i class="fab fa-node"></i> Node.js</span>
+            <span class="skill-badge"><i class="fab fa-neos"></i> Next.js</span>
+            <span class="skill-badge"><i class="fab fa-python"></i> Django</span>
+            <span class="skill-badge"><i class="fab fa-java"></i> Spring</span>
+            <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h5>Tools &amp; Technologies</h5>
+          <div>
+            <span class="skill-badge"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-badge"><i class="fab fa-docker"></i> Docker</span>
+            <span class="skill-badge"><i class="fas fa-cogs"></i> Jenkins</span>
+            <span class="skill-badge"><i class="fab fa-microsoft"></i> Microsoft Azure</span>
+            <span class="skill-badge"><i class="fab fa-jira"></i> JIRA</span>
+            <span class="skill-badge"><i class="fas fa-users"></i> Agile</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h5>Databases</h5>
+          <div>
+            <span class="skill-badge"><i class="fas fa-database"></i> SQL Server</span>
+            <span class="skill-badge"><i class="fas fa-database"></i> MySQL</span>
+            <span class="skill-badge"><i class="fas fa-database"></i> PostgreSQL</span>
+            <span class="skill-badge"><i class="fas fa-database"></i> Oracle</span>
+            <span class="skill-badge"><i class="fas fa-database"></i> MongoDB</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h5>Developer Tools</h5>
+          <div>
+            <span class="skill-badge"><i class="fas fa-code"></i> PyCharm</span>
+            <span class="skill-badge"><i class="fas fa-code"></i> IntelliJ</span>
+            <span class="skill-badge"><i class="fas fa-code"></i> Eclipse</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h5>Libraries</h5>
+          <div>
+            <span class="skill-badge"><i class="fas fa-chart-bar"></i> pandas</span>
+            <span class="skill-badge"><i class="fas fa-superscript"></i> NumPy</span>
+            <span class="skill-badge"><i class="fas fa-chart-line"></i> Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h5>Other Skills</h5>
+          <div>
+            <span class="skill-badge"><i class="fas fa-cubes"></i> Object-oriented programming</span>
+            <span class="skill-badge"><i class="fas fa-plug"></i> API design and integration</span>
+            <span class="skill-badge"><i class="fas fa-desktop"></i> Front-end development</span>
+            <span class="skill-badge"><i class="fas fa-layer-group"></i> Full-stack development</span>
+            <span class="skill-badge"><i class="fas fa-globe"></i> Web application development</span>
+            <span class="skill-badge"><i class="fas fa-cloud"></i> Cloud computing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2025 Mazlum Unay. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="https://github.com/mazlumunay" class="social-icon mx-2"><i class="bi bi-github fs-4"></i></a>
+          <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2"><i class="bi bi-envelope fs-4"></i></a>
+          <a href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en" class="social-icon mx-2"><i class="bi bi-google fs-4"></i></a>
+          <a href="https://www.researchgate.net/profile/Mazlum-Unay" class="social-icon mx-2"><i class="bi bi-mortarboard fs-4"></i></a>
+          <a href="https://www.instagram.com/mazyy47/" class="social-icon mx-2"><i class="bi bi-instagram fs-4"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
