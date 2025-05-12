@@ -11,14 +11,14 @@
     <!-- Favicon -->
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%23222831'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%231a1f2e'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>"
     />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
   </head>
-  <body class="contact-page">
-    <!-- NAVBAR (unchanged) -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background-color: rgba(34, 40, 49, 0.98); backdrop-filter: blur(5px);">
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="transition: all 0.3s ease;">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="../index.html">
           <svg
@@ -29,7 +29,7 @@
             class="d-inline-block me-2 transition-all"
             style="transition: transform 0.3s ease;"
           >
-            <rect width="120" height="120" rx="20" fill="#222831" />
+            <rect width="120" height="120" rx="20" fill="#1a1f2e" />
             <text
               x="50%"
               y="50%"
@@ -80,7 +80,7 @@
               </a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link position-relative px-3 py-2" href="./contact.html">
+              <a class="nav-link position-relative px-3 py-2 active" href="./contact.html">
                 <span class="position-relative">Contact</span>
               </a>
             </li>
@@ -89,108 +89,153 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="contact-hero text-center">
-      <div class="container">
-        <h1 class="display-3 fw-bold mb-4 fade-in-up text-shadow">Get In Touch</h1>
-        <p class="lead mb-5 fade-in-up">Ready to bring your vision to life? I'm just a message away. Let's discuss how we can work together to create something extraordinary.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <a href="#contact-form" class="btn btn-primary btn-lg rounded-pill">
-            <i class="bi bi-chat-dots me-2"></i>Send Message
-          </a>
-          <a href="mailto:unaymazlum@gmail.com" class="btn btn-outline-light btn-lg rounded-pill">
-            <i class="bi bi-envelope me-2"></i>Email Directly
-          </a>
+    <!-- Hero Section - Matching Homepage Style -->
+    <section class="position-relative overflow-hidden">
+      <img
+        src="../img/contact-bg.jpg"
+        class="w-100"
+        style="height: 60vh; object-fit: cover; filter: contrast(1.1) brightness(0.9);"
+        alt="Professional workspace"
+        onerror="this.style.background='linear-gradient(135deg, #1a1f2e 0%, #2c3659 35%, #1a1f2e 100%)'; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48L3N2Zz4='"
+      />
+      
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-center text-white hero-overlay"
+      >
+        <div class="col-md-8 p-lg-5 mx-auto my-5 fade-in-up">
+          <h1 class="display-3 fw-bold mb-4 text-white text-shadow">
+            Let's <span class="text-accent">Connect</span>
+          </h1>
+          <p class="lead text-light opacity-90 mb-4">
+            Ready to bring your ideas to life? I'm here to help turn your vision into reality.
+          </p>
+          <div class="d-flex gap-3 justify-content-center">
+            <a href="#contact-form" class="btn btn-primary btn-lg px-4">
+              Send Message <i class="bi bi-envelope"></i>
+            </a>
+            <a href="mailto:unaymazlum@gmail.com" class="btn btn-outline-light btn-lg px-4">
+              Email Direct <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Methods -->
-    <section class="contact-methods">
-      <div class="container">
+    <!-- Contact Section -->
+    <section id="contact-form" class="py-5 bg-dark-2">
+      <div class="container py-5">
         <div class="row justify-content-center">
-          <div class="col-lg-5 col-md-6 mb-4">
-            <div class="contact-card text-center">
-              <div class="icon-wrapper">
-                <i class="bi bi-envelope-fill"></i>
+          <div class="col-lg-8">
+            <div class="content-container">
+              <h2 class="text-center mb-5 text-white">Get In Touch</h2>
+              
+              <form id="contactForm" class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label text-light">Full Name</label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="name" 
+                      required 
+                    />
+                    <div class="invalid-feedback">Please provide your name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label text-light">Email Address</label>
+                    <input 
+                      type="email" 
+                      class="form-control" 
+                      id="email" 
+                      required 
+                    />
+                    <div class="invalid-feedback">Please provide a valid email.</div>
+                  </div>
+                </div>
+                
+                <div class="row g-3 mt-2">
+                  <div class="col-md-6">
+                    <label for="company" class="form-label text-light">Company</label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="company" 
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="subject" class="form-label text-light">Subject</label>
+                    <select class="form-control form-select" id="subject" required>
+                      <option value="">Choose a topic</option>
+                      <option value="project">Project Collaboration</option>
+                      <option value="job">Job Opportunity</option>
+                      <option value="consultation">Technical Consultation</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a subject.</div>
+                  </div>
+                </div>
+                
+                <div class="mt-3">
+                  <label for="message" class="form-label text-light">Message</label>
+                  <textarea 
+                    class="form-control" 
+                    id="message" 
+                    rows="5" 
+                    placeholder="Tell me about your project or inquiry..."
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Please provide a message.</div>
+                </div>
+                
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-accent px-5">
+                    <i class="bi bi-send me-2"></i>Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4 text-center">
+            <div class="card h-100 project-card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <i class="bi bi-envelope text-accent fs-1 mb-3"></i>
+                <h4 class="text-white">Email</h4>
+                <p class="text-light opacity-75 mb-3">Drop me a line anytime</p>
+                <a href="mailto:unaymazlum@gmail.com" class="btn btn-outline-light mt-auto">
+                  unaymazlum@gmail.com
+                </a>
               </div>
-              <h3>Email Communication</h3>
-              <p>For detailed discussions, project proposals, and professional inquiries, email is the best way to reach me.</p>
-              <a href="mailto:unaymazlum@gmail.com" class="btn">
-                unaymazlum@gmail.com
-              </a>
             </div>
           </div>
           
-          <div class="col-lg-5 col-md-6 mb-4">
-            <div class="contact-card text-center">
-              <div class="icon-wrapper">
-                <i class="bi bi-linkedin"></i>
+          <div class="col-md-4 text-center">
+            <div class="card h-100 project-card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <i class="bi bi-linkedin text-accent fs-1 mb-3"></i>
+                <h4 class="text-white">LinkedIn</h4>
+                <p class="text-light opacity-75 mb-3">Let's connect professionally</p>
+                <a href="https://www.linkedin.com/in/mazlumunay/" target="_blank" class="btn btn-outline-light mt-auto">
+                  Connect Now
+                </a>
               </div>
-              <h3>Professional Network</h3>
-              <p>Connect with me on LinkedIn to explore opportunities, share insights, and build our professional relationship.</p>
-              <a href="https://www.linkedin.com/in/mazlumunay/" target="_blank" class="btn">
-                Connect on LinkedIn
-              </a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact-form" class="py-5">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="contact-form-section">
-              <h2>Let's Start a Conversation</h2>
-              <div class="row">
-                <div class="col-lg-8 mx-auto">
-                  <form id="contactForm">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="name" class="form-label">Full Name</label>
-                          <input type="text" class="form-control" id="name" required />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="email" class="form-label">Email Address</label>
-                          <input type="email" class="form-control" id="email" required />
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label for="company" class="form-label">Company/Organization (Optional)</label>
-                      <input type="text" class="form-control" id="company" />
-                    </div>
-                    
-                    <div class="form-group">
-                      <label for="subject" class="form-label">Subject</label>
-                      <select class="form-control form-select" id="subject" required>
-                        <option value="">Please select a topic</option>
-                        <option value="project">Project Collaboration</option>
-                        <option value="job">Job Opportunity</option>
-                        <option value="consultation">Technical Consultation</option>
-                        <option value="general">General Inquiry</option>
-                      </select>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label for="message" class="form-label">Message</label>
-                      <textarea class="form-control" id="message" rows="6" placeholder="Tell me about your project, idea, or how we can work together..." required></textarea>
-                    </div>
-                    
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-submit">
-                        <i class="bi bi-send me-2"></i>Send Message
-                      </button>
-                    </div>
-                  </form>
-                </div>
+          
+          <div class="col-md-4 text-center">
+            <div class="card h-100 project-card">
+              <div class="card-body d-flex flex-column align-items-center">
+                <i class="bi bi-geo-alt text-accent fs-1 mb-3"></i>
+                <h4 class="text-white">Location</h4>
+                <p class="text-light opacity-75 mb-3">Toronto, Canada</p>
+                <span class="btn btn-outline-light mt-auto">Available Worldwide</span>
               </div>
             </div>
           </div>
@@ -198,83 +243,50 @@
       </div>
     </section>
 
-    <!-- Location Section -->
-    <section class="location-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 text-center">
-            <span class="section-badge">My Location</span>
-            <h2>Based in Toronto, Canada</h2>
-            <p class="lead">Open to local meetups, remote collaborations, and worldwide opportunities. Let's connect regardless of geography!</p>
-
-            <div class="map-container">
-              <div class="ratio ratio-16x9">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184551.8085888339!2d-79.51814190273436!3d43.71840381175053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1718239394211!5m2!1sen!2sca"
-                  style="border: 0;"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  aria-label="Google Map showing Toronto, Canada location"
-                >
-                </iframe>
-              </div>
-              <div class="map-overlay">
-                <div class="d-flex justify-content-center gap-4 text-center">
-                  <div>
-                    <i class="bi bi-geo-alt-fill text-accent fs-5 me-2"></i>
-                    <span>Toronto, Ontario</span>
-                  </div>
-                  <div>
-                    <i class="bi bi-clock-fill text-accent fs-5 me-2"></i>
-                    <span>UTC-5 (EST)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="location-actions">
-              <a href="mailto:unaymazlum@gmail.com" class="btn">
-                <i class="bi bi-envelope me-2"></i>Email Me
-              </a>
-              <a href="https://www.linkedin.com/in/mazlumunay/" target="_blank" class="btn">
-                <i class="bi bi-linkedin me-2"></i>Connect
-              </a>
-            </div>
-          </div>
+    <!-- Call to Action -->
+    <section class="cta-transparent py-5">
+      <div class="container py-5 text-center">
+        <h2 class="display-4 fw-bold mb-4">Ready to Start?</h2>
+        <p class="lead mb-5 text-light opacity-90">
+          I respond to all inquiries within 24 hours. Let's discuss your next project!
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#contact-form" class="btn btn-primary btn-lg">
+            Send Message <i class="bi bi-arrow-up-short"></i>
+          </a>
+          <a href="../index.html#all-projects" class="btn btn-outline-light btn-lg">
+            View My Work <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer (unchanged) -->
-    <footer class="py-5">
+    <!-- Footer -->
+    <footer class="mt-auto">
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
-            <p class="mb-3">&copy; 2025 Mazlum Unay. All rights reserved.</p>
-            <p class="text-muted small">Full Stack Developer | AI Enthusiast | Innovation Driver</p>
+            <p class="mb-0 opacity-90">&copy; 2025 Mazlum Unay. All rights reserved.</p>
           </div>
-          <div class="col-md-6">
-            <div class="d-flex justify-content-center justify-content-md-end gap-3 flex-wrap">
-              <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon" aria-label="LinkedIn">
-                <i class="bi bi-linkedin fs-4"></i>
-              </a>
-              <a href="https://github.com/mazlumunay" class="social-icon" aria-label="GitHub">
-                <i class="bi bi-github fs-4"></i>
-              </a>
-              <a href="mailto:unaymazlum@gmail.com" class="social-icon" aria-label="Email">
-                <i class="bi bi-envelope fs-4"></i>
-              </a>
-              <a href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en" class="social-icon" aria-label="Google Scholar">
-                <i class="bi bi-google fs-4"></i>
-              </a>
-              <a href="https://www.researchgate.net/profile/Mazlum-Unay" class="social-icon" aria-label="ResearchGate">
-                <i class="bi bi-mortarboard fs-4"></i>
-              </a>
-              <a href="https://www.instagram.com/mazyy47/" class="social-icon" aria-label="Instagram">
-                <i class="bi bi-instagram fs-4"></i>
-              </a>
-            </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon mx-2" title="LinkedIn">
+              <i class="bi bi-linkedin fs-4"></i>
+            </a>
+            <a href="https://github.com/mazlumunay" class="social-icon mx-2" title="GitHub">
+              <i class="bi bi-github fs-4"></i>
+            </a>
+            <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2" title="Email">
+              <i class="bi bi-envelope fs-4"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en" class="social-icon mx-2" title="Google Scholar">
+              <i class="bi bi-mortarboard fs-4"></i>
+            </a>
+            <a href="https://www.researchgate.net/profile/Mazlum-Unay" class="social-icon mx-2" title="ResearchGate">
+              <i class="bi bi-journal-text fs-4"></i>
+            </a>
+            <a href="https://www.instagram.com/mazyy47/" class="social-icon mx-2" title="Instagram">
+              <i class="bi bi-instagram fs-4"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -283,66 +295,83 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-      // Enhanced form submission with better UX
-      document.getElementById("contactForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // Get all form values
-        const formData = {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-          company: document.getElementById("company").value,
-          subject: document.getElementById("subject").value,
-          message: document.getElementById("message").value
-        };
-
-        // Show loading state
-        const submitBtn = document.querySelector('.btn-submit');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="bi bi-arrow-repeat spin me-2"></i>Sending...';
-        submitBtn.disabled = true;
-
-        // Simulate sending (replace with actual API call)
-        setTimeout(() => {
-          // Reset form and show success
-          this.reset();
-          submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Message Sent!';
+      // Simple form validation and submission
+      (function() {
+        'use strict';
+        
+        const form = document.getElementById('contactForm');
+        
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
           
-          // Show success alert
-          alert(`Thank you, ${formData.name}! Your message about "${formData.subject}" has been received. I'll get back to you within 24 hours.`);
+          if (form.checkValidity()) {
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+              // Success state
+              submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Message Sent!';
+              submitBtn.classList.remove('btn-accent');
+              submitBtn.classList.add('btn-success');
+              
+              // Show success message
+              const alertDiv = document.createElement('div');
+              alertDiv.className = 'alert alert-success mt-3';
+              alertDiv.innerHTML = `
+                <i class="bi bi-check-circle-fill me-2"></i>
+                Thank you! Your message has been sent successfully. I'll get back to you soon.
+              `;
+              submitBtn.parentNode.insertBefore(alertDiv, submitBtn.nextSibling);
+              
+              // Reset form
+              form.reset();
+              form.classList.remove('was-validated');
+              
+              // Reset button after delay
+              setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('btn-success');
+                submitBtn.classList.add('btn-accent');
+                if (alertDiv.parentNode) {
+                  alertDiv.remove();
+                }
+              }, 5000);
+            }, 1500);
+          }
           
-          // Reset button after 3 seconds
-          setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-          }, 3000);
-        }, 1500);
-
-        // Log form data for debugging
-        console.log('Form submitted:', formData);
-      });
-
-      // Add CSS for spin animation
-      const style = document.createElement('style');
-      style.textContent = `
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        .spin {
-          animation: spin 1s linear infinite;
-        }
-      `;
-      document.head.appendChild(style);
+          form.classList.add('was-validated');
+        });
+      })();
 
       // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
         });
+      });
+
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
       });
     </script>
   </body>

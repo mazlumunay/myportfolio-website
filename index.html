@@ -16,11 +16,8 @@
     <!-- Favicon (using your SVG as icon) -->
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%23222831'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%231a1f2e'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>"
     />
-
-    <!-- Alternative: If you want to use a separate file -->
-    <!-- <link rel="icon" href="./images/logo.svg" type="image/svg+xml"> -->
 
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -29,17 +26,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <!--  NAVBAR -->
+    <!--  NAVBAR (Now with transparency and glassmorphism) -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
-      style="
-        background-color: rgba(34, 40, 49, 0.98);
-        backdrop-filter: blur(5px);
-      "
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="transition: all 0.3s ease;"
     >
       <div class="container">
         <!-- Logo and Brand Name (left side) -->
-        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <a class="navbar-brand d-flex align-items-center" href="./index.html">
           <svg
             width="36"
             height="36"
@@ -48,7 +42,7 @@
             class="d-inline-block me-2 transition-all"
             style="transition: transform 0.3s ease"
           >
-            <rect width="120" height="120" rx="20" fill="#222831" />
+            <rect width="120" height="120" rx="20" fill="#1a1f2e" />
             <text
               x="50%"
               y="50%"
@@ -83,7 +77,7 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item mx-1">
               <a
-                class="nav-link position-relative px-3 py-2"
+                class="nav-link position-relative px-3 py-2 active"
                 href="./index.html"
               >
                 <span class="position-relative">Home</span>
@@ -126,33 +120,32 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Enhanced Styling -->
     <div class="position-relative overflow-hidden">
-      <!-- Updated professional image (you should replace with your own high-quality image) -->
       <img
         src="./img/hero.jpg"
         class="w-100"
-        style="height: 100vh; object-fit: cover"
+        style="height: 100vh; object-fit: cover; filter: contrast(1.1) brightness(0.9);"
         alt="Modern developer workspace with code on screen"
       />
 
-      <!-- Improved overlay with better contrast -->
+      <!-- Enhanced overlay with new gradient -->
       <div
         class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-center text-white hero-overlay"
       >
-        <div class="col-md-8 p-lg-5 mx-auto my-5">
+        <div class="col-md-8 p-lg-5 mx-auto my-5 fade-in-up">
           <h1 class="display-3 fw-bold mb-4 text-white text-shadow">
             Crafting Digital Excellence Through<br />
-            <span class="text-accent">Innovative Code</span> and
-            <span class="text-accent">Clean Solutions</span>
+            <span class="text-accent" data-text="Innovative Code">Innovative Code</span> and
+            <span class="text-accent" data-text="Clean Solutions">Clean Solutions</span>
           </h1>
-          <h3 class="fw-normal mb-4 text-light">
+          <h3 class="fw-normal mb-4 text-light opacity-90">
             Full Stack Developer | Problem Solver | Continuous Learner
           </h3>
           <div class="d-flex gap-3 justify-content-center lead fw-normal">
             <a
               href="./public/projects.html"
-              class="btn btn-primary btn-lg px-4"
+              class="btn btn-primary btn-lg px-4 shadow"
             >
               View My Work <i class="bi bi-arrow-down"></i>
             </a>
@@ -167,14 +160,14 @@
       </div>
     </div>
 
-    <!-- Projects Section -->
-    <section id="all-projects" class="py-5">
+    <!-- Projects Section with Enhanced Cards -->
+    <section id="all-projects" class="py-5 bg-dark-2">
       <div class="container py-5">
         <div class="row mb-5">
           <div class="col-lg-8 mx-auto text-center">
-            <span class="text-accent fw-bold">PORTFOLIO</span>
+            <span class="text-accent fw-bold fs-5">PORTFOLIO</span>
             <h2 class="display-4 fw-bold mb-4 text-white">Featured Projects</h2>
-            <p class="lead text-light">
+            <p class="lead text-light opacity-90">
               A selection of my recent work showcasing full-stack development
               capabilities and problem-solving approach.
             </p>
@@ -184,47 +177,37 @@
         <!-- Project 1 - TechForum -->
         <div class="row align-items-center g-5 mb-5">
           <div class="col-lg-6">
-            <div
-              class="project-image-container rounded-4 overflow-hidden shadow-lg border border-dark"
-            >
+            <div class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative">
               <img
                 src="img/techforum.png"
                 alt="Screenshot of TechForum discussion platform"
                 class="img-fluid zoom-hover"
+                style="filter: brightness(1.05) contrast(1.1);"
               />
-              <div class="project-badge">Featured</div>
+              <div class="project-badge glass-effect">Featured</div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="ps-lg-5">
               <h3 class="fw-bold mb-3 text-white">TechForum</h3>
               <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >Node.js</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >Express</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >MongoDB</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >EJS</span
-                >
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">Node.js</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">Express</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">MongoDB</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">EJS</span>
               </div>
-              <p class="mb-4 text-light">
-                A comprehensive discussion platform for technology enthusiasts
-                featuring:
+              <p class="mb-4 text-light opacity-90">
+                A comprehensive discussion platform for technology enthusiasts featuring:
               </p>
               <ul class="project-features mb-4">
-                <li class="text-light">
+                <li class="text-light opacity-95">
                   Role-based access control (Admin/Moderator/User)
                 </li>
-                <li class="text-light">
+                <li class="text-light opacity-95">
                   Real-time notifications and activity tracking
                 </li>
-                <li class="text-light">Advanced content moderation tools</li>
-                <li class="text-light">
+                <li class="text-light opacity-95">Advanced content moderation tools</li>
+                <li class="text-light opacity-95">
                   Responsive design with mobile optimization
                 </li>
               </ul>
@@ -253,48 +236,37 @@
         <!-- Project 2 - Savoria -->
         <div class="row align-items-center g-5 mb-5">
           <div class="col-lg-6 order-1 order-lg-2">
-            <div
-              class="project-image-container rounded-4 overflow-hidden shadow-lg border border-dark"
-            >
+            <div class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative">
               <img
                 src="img/savoria-ecommerce.png"
                 alt="Screenshot of Savoria e-commerce platform"
                 class="img-fluid zoom-hover"
+                style="filter: brightness(1.05) contrast(1.1);"
               />
-              <div class="project-badge">Featured</div>
+              <div class="project-badge glass-effect">Featured</div>
             </div>
           </div>
           <div class="col-lg-6 order-2 order-lg-1">
-            <div class="ps-lg-5">
+            <div class="pe-lg-5">
               <h3 class="fw-bold mb-3 text-white">Savoria E-commerce</h3>
               <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >JavaScript</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >jQuery</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >PHP</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >HTML/CSS</span
-                >
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">JavaScript</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">jQuery</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">PHP</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">HTML/CSS</span>
               </div>
-              <p class="mb-4 text-light">An e-commerce platform featuring:</p>
+              <p class="mb-4 text-light opacity-90">An e-commerce platform featuring:</p>
               <ul class="project-features mb-4">
-                <li class="text-light">
-                  Intuitive product catalog with advanced filtering and sorting
-                  options
+                <li class="text-light opacity-95">
+                  Intuitive product catalog with advanced filtering and sorting options
                 </li>
-                <li class="text-light">
+                <li class="text-light opacity-95">
                   Secure checkout process for seamless transactions
                 </li>
-                <li class="text-light">
-                  Interactive wishlist feature to enhance user experience and
-                  retention
+                <li class="text-light opacity-95">
+                  Interactive wishlist feature to enhance user experience and retention
                 </li>
-                <li class="text-light">
+                <li class="text-light opacity-95">
                   Responsive UI for smooth navigation across different devices
                 </li>
               </ul>
@@ -323,46 +295,37 @@
         <!-- Project 3 - TinDog -->
         <div class="row align-items-center g-5 mb-5">
           <div class="col-lg-6 order-lg-1">
-            <div
-              class="project-image-container rounded-4 overflow-hidden shadow-lg border border-dark"
-            >
+            <div class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative">
               <img
                 src="img/tindog.png"
                 alt="Screenshot of TinDog dating app for dog owners"
                 class="img-fluid zoom-hover"
+                style="filter: brightness(1.05) contrast(1.1);"
               />
-              <div class="project-badge">Featured</div>
+              <div class="project-badge glass-effect">Featured</div>
             </div>
           </div>
           <div class="col-lg-6 order-lg-2">
-            <div class="pe-lg-5">
+            <div class="ps-lg-5">
               <h3 class="fw-bold mb-3 text-white">TinDog</h3>
               <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >JavaScript</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >Bootstrap 5</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >HTML5</span
-                >
-                <span class="badge bg-accent bg-opacity-10 text-accent"
-                  >CSS3</span
-                >
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">JavaScript</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">Bootstrap 5</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">HTML5</span>
+                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">CSS3</span>
               </div>
-              <p class="mb-4 text-light">
+              <p class="mb-4 text-light opacity-90">
                 A fun, mobile-first dating platform for dog owners with:
               </p>
               <ul class="project-features mb-4">
-                <li class="text-light">
+                <li class="text-light opacity-95">
                   Responsive design with Bootstrap 5 components
                 </li>
-                <li class="text-light">Smooth animations and transitions</li>
-                <li class="text-light">
+                <li class="text-light opacity-95">Smooth animations and transitions</li>
+                <li class="text-light opacity-95">
                   Pricing section with feature comparison
                 </li>
-                <li class="text-light">Testimonials carousel</li>
+                <li class="text-light opacity-95">Testimonials carousel</li>
               </ul>
               <div class="d-flex flex-wrap gap-3">
                 <a
@@ -389,7 +352,8 @@
         <div class="text-center mt-5">
           <a
             href="./public/projects.html"
-            class="btn btn-outline-accent btn-lg px-5"
+            class="btn btn-outline-light btn-lg px-5"
+            style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.05);"
           >
             View Full Portfolio <i class="bi bi-arrow-right ms-2"></i>
           </a>
@@ -398,62 +362,47 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="py-5 text-white">
+    <section id="publications" class="py-5 text-white bg-dark-3">
       <div class="container py-5">
         <h2 class="text-center mb-5 display-4 fw-bold">Publications</h2>
-        <p class="lead text-center mb-5 text-light">
+        <p class="lead text-center mb-5 text-light opacity-90">
           Academic research and technical contributions
         </p>
 
         <div class="row g-4 justify-content-center">
           <!-- Featured Publication 1 -->
           <div class="col-lg-6">
-            <div class="card h-100 bg-dark-2 border-0">
+            <div class="card h-100 glass-effect">
               <div class="card-body p-4">
                 <div class="d-flex align-items-start">
                   <div class="flex-shrink-0 me-3">
-                    <i class="bi bi-journal-text fs-1 text-primary"></i>
+                    <i class="bi bi-journal-text fs-1 text-accent"></i>
                   </div>
                   <div>
                     <div class="d-flex align-items-center gap-2 mb-2">
-                      <span
-                        class="badge bg-primary bg-opacity-25 text-primary px-2"
-                        >Featured Research</span
-                      >
-                      <small class="text-muted"
-                        ><i class="bi bi-calendar me-1"></i>2019</small
-                      >
+                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Featured Research</span>
+                      <small class="text-muted"><i class="bi bi-calendar me-1"></i>2019</small>
                     </div>
                     <h3 class="h4 card-title text-white">
-                      Counting bacteria colonies based on image processing
-                      methods
+                      Counting bacteria colonies based on image processing methods
                     </h3>
                     <p class="text-muted mb-2">
-                      <i class="bi bi-journal-text me-2"></i>Medical
-                      Technologies Congress (TIPTEKNO)
+                      <i class="bi bi-journal-text me-2"></i>Medical Technologies Congress (TIPTEKNO)
                     </p>
-                    <p class="card-text text-light mb-3">
-                      This paper presents an automated method for counting
-                      bacterial colonies using image processing techniques,
-                      offering a more efficient alternative to manual counting
-                      in microbiological studies.
+                    <p class="card-text text-light mb-3 opacity-90">
+                      This paper presents an automated method for counting bacterial colonies using image processing techniques,
+                      offering a more efficient alternative to manual counting in microbiological studies.
                     </p>
                     <div class="d-flex flex-wrap gap-2 mb-3">
-                      <span class="badge bg-primary bg-opacity-25 text-primary"
-                        >Image Processing</span
-                      >
-                      <span class="badge bg-primary bg-opacity-25 text-primary"
-                        >Medical Tech</span
-                      >
-                      <span class="badge bg-primary bg-opacity-25 text-primary"
-                        >Automation</span
-                      >
+                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Image Processing</span>
+                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Medical Tech</span>
+                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Automation</span>
                     </div>
                     <a
                       href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pn4cZR0AAAAJ&citation_for_view=pn4cZR0AAAAJ:W7OEmFMy1HYC"
-                      class="btn btn-primary btn-sm"
+                      class="btn btn-accent btn-sm"
                     >
-                      <i class="fas fa-graduation-cap me-1"></i> Google Scholar
+                      <i class="bi bi-mortarboard me-1"></i> Google Scholar
                     </a>
                   </div>
                 </div>
@@ -463,42 +412,33 @@
 
           <!-- Publication 2 -->
           <div class="col-lg-6">
-            <div class="card h-100 bg-dark-2 border-0">
+            <div class="card h-100 glass-effect">
               <div class="card-body p-4">
                 <div class="d-flex align-items-start">
                   <div class="flex-shrink-0 me-3">
-                    <i class="bi bi-journal-text fs-1 text-primary"></i>
+                    <i class="bi bi-journal-text fs-1 text-accent"></i>
                   </div>
                   <div>
                     <h3 class="h4 card-title text-white">
-                      Designing an obstacle detection and alerting system for
-                      visually impaired people on sidewalks
+                      Designing an obstacle detection and alerting system for visually impaired people on sidewalks
                     </h3>
                     <p class="text-muted mb-2">
-                      <i class="bi bi-calendar me-2"></i>Medical Technologies
-                      Congress (TIPTEKNO) • 2019
+                      <i class="bi bi-calendar me-2"></i>Medical Technologies Congress (TIPTEKNO) • 2019
                     </p>
-                    <p class="card-text text-light mb-3">
-                      A novel system designed to help visually impaired
-                      individuals navigate sidewalks safely by detecting
+                    <p class="card-text text-light mb-3 opacity-90">
+                      A novel system designed to help visually impaired individuals navigate sidewalks safely by detecting
                       obstacles and providing appropriate alerts.
                     </p>
                     <div class="d-flex flex-wrap gap-2 mb-3">
-                      <span class="badge bg-primary bg-opacity-25 text-primary"
-                        >Assistive Tech</span
-                      >
-                      <span class="badge bg-primary bg-opacity-25 text-primary"
-                        >Computer Vision</span
-                      >
-                      <span class="badge bg-primary bg-opacity-25 text-primary"
-                        >Accessibility</span
-                      >
+                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Assistive Tech</span>
+                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Computer Vision</span>
+                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Accessibility</span>
                     </div>
                     <a
                       href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pn4cZR0AAAAJ&citation_for_view=pn4cZR0AAAAJ:Tyk-4Ss8FVUC"
-                      class="btn btn-primary btn-sm"
+                      class="btn btn-accent btn-sm"
                     >
-                      <i class="fas fa-graduation-cap me-1"></i> Google Scholar
+                      <i class="bi bi-mortarboard me-1"></i> Google Scholar
                     </a>
                   </div>
                 </div>
@@ -511,6 +451,7 @@
           <a
             href="./public/publications.html"
             class="btn btn-outline-light btn-lg px-4"
+            style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.05);"
           >
             View All Publications <i class="bi bi-arrow-right ms-2"></i>
           </a>
@@ -519,11 +460,11 @@
     </section>
 
     <!-- GitHub Section -->
-    <section class="py-5">
+    <section class="py-5 bg-dark-2">
       <div class="container py-5">
         <div class="github-section" style="max-width: 900px; margin: 0 auto">
-          <h2 class="text-center mb-4">My Coding Journey</h2>
-          <p class="lead text-center mb-5">
+          <h2 class="text-center mb-4 text-white">My Coding Journey</h2>
+          <p class="lead text-center mb-5 text-light opacity-90">
             Daily contributions to open-source and personal projects.
           </p>
 
@@ -531,21 +472,22 @@
             <img
               src="https://ghchart.rshah.org/mazlumunay?color1=1a0000&color2=ff3333&color3=ff0000"
               alt="GitHub Contributions"
-              class="img-fluid mb-4"
+              class="img-fluid mb-4 rounded-3"
+              style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"
             />
 
-            <div
-              class="d-flex flex-wrap justify-content-center gap-4 github-stats-container"
-            >
+            <div class="d-flex flex-wrap justify-content-center gap-4 github-stats-container">
               <img
                 src="https://github-readme-stats.vercel.app/api?username=mazlumunay&show_icons=true&theme=dark"
                 alt="GitHub Stats"
-                class="github-stat"
+                class="img-fluid rounded-3"
+                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"
               />
               <img
                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=mazlumunay&layout=compact&theme=dark"
                 alt="Top Languages"
-                class="github-stat"
+                class="img-fluid rounded-3"
+                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"
               />
             </div>
           </div>
@@ -554,60 +496,66 @@
     </section>
 
     <!-- Call to Action -->
-<section class="cta-simple">
-  <div class="container py-5 text-center">
-    <h2 class="display-4 fw-bold mb-4">Ready to Start a Project?</h2>
-    <p class="lead mb-5">
-      I'm available for freelance work and full-time opportunities.
-    </p>
-    <div class="d-flex gap-3 justify-content-center">
-      <a href="./contact.html" class="btn btn-outline-light btn-lg px-5">
-        Get In Touch <i class="bi bi-chat-left-text ms-2"></i>
-      </a>
+    <section class="cta-transparent py-5">
+      <div class="container py-5 text-center">
+        <h2 class="display-4 fw-bold mb-4 text-white">Ready to Start a Project?</h2>
+        <p class="lead mb-5 text-light opacity-90">
+          I'm available for freelance work and full-time opportunities.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="./public/contact.html" class="btn btn-primary btn-lg px-5">
+            Get In Touch <i class="bi bi-chat-left-text ms-2"></i>
+          </a>
+          <a href="./public/projects.html" class="btn btn-outline-light btn-lg px-5">
+            View Portfolio <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    </div>
-  </div>
-</section>
-
-    <!-- Footer -->
-    <footer class="py-5">
+    <!-- Footer (Now with transparency and glassmorphism) -->
+    <footer class="mt-auto">
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0">&copy; 2025 Mazlum Unay. All rights reserved.</p>
+            <p class="mb-0 opacity-90">&copy; 2025 Mazlum Unay. All rights reserved.</p>
           </div>
           <div class="col-md-6 text-center text-md-end">
-            <a
-              href="https://www.linkedin.com/in/mazlumunay/"
-              class="social-icon mx-2"
-              ><i class="bi bi-linkedin fs-4"></i
-            ></a>
-            <a href="https://github.com/mazlumunay" class="social-icon mx-2"
-              ><i class="bi bi-github fs-4"></i
-            ></a>
-            <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2"
-              ><i class="bi bi-envelope fs-4"></i
-            ></a>
-            <a
-              href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en"
-              class="social-icon mx-2"
-              ><i class="bi bi-google fs-4"></i
-            ></a>
-            <a
-              href="https://www.researchgate.net/profile/Mazlum-Unay"
-              class="social-icon mx-2"
-              ><i class="bi bi-mortarboard fs-4"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/mazyy47/"
-              class="social-icon mx-2"
-              ><i class="bi bi-instagram fs-4"></i
-            ></a>
+            <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon mx-2" title="LinkedIn">
+              <i class="bi bi-linkedin fs-4"></i>
+            </a>
+            <a href="https://github.com/mazlumunay" class="social-icon mx-2" title="GitHub">
+              <i class="bi bi-github fs-4"></i>
+            </a>
+            <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2" title="Email">
+              <i class="bi bi-envelope fs-4"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en" class="social-icon mx-2" title="Google Scholar">
+              <i class="bi bi-mortarboard fs-4"></i>
+            </a>
+            <a href="https://www.researchgate.net/profile/Mazlum-Unay" class="social-icon mx-2" title="ResearchGate">
+              <i class="bi bi-journal-text fs-4"></i>
+            </a>
+            <a href="https://www.instagram.com/mazyy47/" class="social-icon mx-2" title="Instagram">
+              <i class="bi bi-instagram fs-4"></i>
+            </a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Optional: Add scroll effect for navbar -->
+    <script>
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
   </body>
 </html>
