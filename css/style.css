@@ -697,3 +697,39 @@ body.about-page .section-title {
 body.about-page .text-muted {
   color: #d1d5db !important;
 }
+
+.navbar-brand:hover svg {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.nav-link span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFD369;
+  transition: width 0.3s ease;
+}
+
+/* NAVBAR*/
+.nav-link:hover span::after,
+.nav-link.active span::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #FFD369 !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px rgba(255, 211, 105, 0.5);
+}

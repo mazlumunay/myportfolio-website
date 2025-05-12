@@ -29,19 +29,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <!-- Professional Navigation with Right-Aligned Links -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
-    >
-      <div class="container-fluid">
+    <!--  NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background-color: rgba(34, 40, 49, 0.98); backdrop-filter: blur(5px);">
+      <div class="container">
         <!-- Logo and Brand Name (left side) -->
-        <a class="navbar-brand" href="../index.html">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
           <svg
             width="36"
             height="36"
             viewBox="0 0 120 120"
             xmlns="http://www.w3.org/2000/svg"
-            class="d-inline-block me-2"
+            class="d-inline-block me-2 transition-all"
+            style="transition: transform 0.3s ease;"
           >
             <rect width="120" height="120" rx="20" fill="#222831" />
             <text
@@ -56,12 +55,12 @@
               MU
             </text>
           </svg>
-          <span class="fw-bold text-uppercase">Mazlum Unay</span>
+          <span class="fw-bold text-uppercase d-none d-sm-inline">Mazlum Unay</span>
         </a>
-
+    
         <!-- Toggler Button -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarRightAlign"
@@ -70,29 +69,34 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
+    
         <!-- Navigation Links (right-aligned) -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarRightAlign"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="./index.html">Home</a>
+        <div class="collapse navbar-collapse" id="navbarRightAlign">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-1">
+              <a class="nav-link position-relative px-3 py-2" href="./index.html">
+                <span class="position-relative">Home</span>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./public/projects.html">Projects</a>
+            <li class="nav-item mx-1">
+              <a class="nav-link position-relative px-3 py-2" href="./public/projects.html">
+                <span class="position-relative">Projects</span>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./public/publications.html"
-                >Publications</a
-              >
+            <li class="nav-item mx-1">
+              <a class="nav-link position-relative px-3 py-2" href="./public/publications.html">
+                <span class="position-relative">Publications</span>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./public/about.html">About</a>
+            <li class="nav-item mx-1">
+              <a class="nav-link position-relative px-3 py-2" href="./public/about.html">
+                <span class="position-relative">About</span>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./public/contact.html">Contact</a>
+            <li class="nav-item mx-1">
+              <a class="nav-link position-relative px-3 py-2" href="./public/contact.html">
+                <span class="position-relative">Contact</span>
+              </a>
             </li>
           </ul>
         </div>
