@@ -8,79 +8,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Favicon (using your SVG as icon) -->
+    <!-- Favicon -->
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%23222831'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>"
     />
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f8f9fa;
-        color: #212529;
-      }
-      .navbar {
-        background-color: #212529;
-      }
-      .navbar-brand,
-      .nav-link {
-        color: white !important;
-      }
-      .contact-header {
-        background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
-        color: white;
-        padding: 4rem 0;
-        text-align: center;
-      }
-      .contact-card {
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-        margin-bottom: 30px;
-        border: none;
-      }
-      .contact-card:hover {
-        transform: translateY(-5px);
-      }
-      .contact-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: #4ca1af;
-      }
-      .form-section {
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
-      }
-      .btn-primary {
-        background-color: #4ca1af;
-        border-color: #4ca1af;
-      }
-      .btn-primary:hover {
-        background-color: #3d8b99;
-        border-color: #3d8b99;
-      }
-      footer {
-        background-color: #212529;
-        color: white;
-        padding: 2rem 0;
-        margin-top: 3rem;
-      }
-      .social-icon {
-        color: white;
-        font-size: 1.5rem;
-        margin: 0 10px;
-        transition: color 0.3s;
-      }
-      .social-icon:hover {
-        color: #4ca1af;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
   </head>
-  <body>
-    <!--  NAVBAR -->
+  <body class="contact-page">
+    <!-- NAVBAR (unchanged) -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background-color: rgba(34, 40, 49, 0.98); backdrop-filter: blur(5px);">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="../index.html">
@@ -152,149 +89,155 @@
       </div>
     </nav>
 
-    <!-- Contact Header -->
-    <div class="contact-header">
+    <!-- Hero Section -->
+    <section class="contact-hero text-center">
       <div class="container">
-        <h1 class="display-4 fw-bold">Let's Connect</h1>
-        <p class="lead">
-          I'm always open to discussing new projects, opportunities, or just
-          chatting about tech!
-        </p>
-      </div>
-    </div>
-
-    <!-- Contact Options -->
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card contact-card h-100 text-center p-4">
-            <div class="contact-icon">
-              <i class="bi bi-envelope-fill"></i>
-            </div>
-            <h3>Email Me</h3>
-            <p>The best way to reach me for professional inquiries</p>
-            <a
-              href="mailto:unaymazlum@gmail.com"
-              class="btn btn-outline-primary"
-              >unaymazlum@gmail.com</a
-            >
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card contact-card h-100 text-center p-4">
-            <div class="contact-icon">
-              <i class="bi bi-linkedin"></i>
-            </div>
-            <h3>LinkedIn</h3>
-            <p>Let's connect professionally and network</p>
-            <a
-              href="https://www.linkedin.com/in/mazlumunay/"
-              class="btn btn-outline-primary"
-              >Connect on LinkedIn</a
-            >
-          </div>
+        <h1 class="display-3 fw-bold mb-4 fade-in-up text-shadow">Get In Touch</h1>
+        <p class="lead mb-5 fade-in-up">Ready to bring your vision to life? I'm just a message away. Let's discuss how we can work together to create something extraordinary.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="#contact-form" class="btn btn-primary btn-lg rounded-pill">
+            <i class="bi bi-chat-dots me-2"></i>Send Message
+          </a>
+          <a href="mailto:unaymazlum@gmail.com" class="btn btn-outline-light btn-lg rounded-pill">
+            <i class="bi bi-envelope me-2"></i>Email Directly
+          </a>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-6 mb-4">
+            <div class="contact-card text-center">
+              <div class="icon-wrapper">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <h3>Email Communication</h3>
+              <p>For detailed discussions, project proposals, and professional inquiries, email is the best way to reach me.</p>
+              <a href="mailto:unaymazlum@gmail.com" class="btn">
+                unaymazlum@gmail.com
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-5 col-md-6 mb-4">
+            <div class="contact-card text-center">
+              <div class="icon-wrapper">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <h3>Professional Network</h3>
+              <p>Connect with me on LinkedIn to explore opportunities, share insights, and build our professional relationship.</p>
+              <a href="https://www.linkedin.com/in/mazlumunay/" target="_blank" class="btn">
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Form -->
-    <div class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="form-section">
-            <h2 class="text-center mb-4">Send Me a Message</h2>
-            <form id="contactForm">
-              <div class="mb-3">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="name" required />
+    <section id="contact-form" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="contact-form-section">
+              <h2>Let's Start a Conversation</h2>
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <form id="contactForm">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="name" class="form-label">Full Name</label>
+                          <input type="text" class="form-control" id="name" required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="email" class="form-label">Email Address</label>
+                          <input type="email" class="form-control" id="email" required />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="company" class="form-label">Company/Organization (Optional)</label>
+                      <input type="text" class="form-control" id="company" />
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="subject" class="form-label">Subject</label>
+                      <select class="form-control form-select" id="subject" required>
+                        <option value="">Please select a topic</option>
+                        <option value="project">Project Collaboration</option>
+                        <option value="job">Job Opportunity</option>
+                        <option value="consultation">Technical Consultation</option>
+                        <option value="general">General Inquiry</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="form-control" id="message" rows="6" placeholder="Tell me about your project, idea, or how we can work together..." required></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-submit">
+                        <i class="bi bi-send me-2"></i>Send Message
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" required />
-              </div>
-              <div class="mb-3">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="subject" required />
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary btn-lg">
-                  Send Message
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Location -->
-    <!-- Professional Location Map Section -->
-    <section class="py-5 bg-dark-2">
-      <div class="container py-4">
+    <!-- Location Section -->
+    <section class="location-section">
+      <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center">
-            <span class="text-accent fw-bold">LOCATION</span>
-            <h2 class="display-5 fw-bold mb-4 text-black">
-              Based in Toronto, Canada
-            </h2>
-            <p class="lead text-dark mb-5">
-              Available for local and remote opportunities worldwide
-            </p>
+            <span class="section-badge">My Location</span>
+            <h2>Based in Toronto, Canada</h2>
+            <p class="lead">Open to local meetups, remote collaborations, and worldwide opportunities. Let's connect regardless of geography!</p>
 
-            <div
-              class="position-relative rounded-4 overflow-hidden shadow-lg border border-dark"
-            >
+            <div class="map-container">
               <div class="ratio ratio-16x9">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184551.8085888339!2d-79.51814190273436!3d43.71840381175053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1718239394211!5m2!1sen!2sca"
-                  style="
-                    border: 0;
-                    filter: grayscale(20%) contrast(110%) brightness(90%);
-                  "
+                  style="border: 0;"
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
+                  aria-label="Google Map showing Toronto, Canada location"
                 >
                 </iframe>
               </div>
-              <div
-                class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark-gradient"
-              >
-                <div class="d-flex justify-content-center gap-4">
-                  <div class="d-flex align-items-center">
+              <div class="map-overlay">
+                <div class="d-flex justify-content-center gap-4 text-center">
+                  <div>
                     <i class="bi bi-geo-alt-fill text-accent fs-5 me-2"></i>
-                    <span class="text-light">Toronto, Ontario</span>
+                    <span>Toronto, Ontario</span>
                   </div>
-                  <div class="d-flex align-items-center">
+                  <div>
                     <i class="bi bi-clock-fill text-accent fs-5 me-2"></i>
-                    <span class="text-light">UTC-5 (EST)</span>
+                    <span>UTC-5 (EST)</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="mt-4">
-              <a
-                href="mailto:unaymazlum@gmail.com"
-                class="btn btn-accent btn-lg px-4 me-3"
-              >
+            <div class="location-actions">
+              <a href="mailto:unaymazlum@gmail.com" class="btn">
                 <i class="bi bi-envelope me-2"></i>Email Me
               </a>
-              <a
-                href="https://www.linkedin.com/in/mazlumunay/"
-                class="btn btn-accent btn-lg px-4 me-3"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/in/mazlumunay/" target="_blank" class="btn">
                 <i class="bi bi-linkedin me-2"></i>Connect
               </a>
             </div>
@@ -303,74 +246,104 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (unchanged) -->
     <footer class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0">&copy; 2025 Mazlum Unay. All rights reserved.</p>
+            <p class="mb-3">&copy; 2025 Mazlum Unay. All rights reserved.</p>
+            <p class="text-muted small">Full Stack Developer | AI Enthusiast | Innovation Driver</p>
           </div>
-          <div class="col-md-6 text-center text-md-end">
-            <a
-              href="https://www.linkedin.com/in/mazlumunay/"
-              class="social-icon mx-2"
-              ><i class="bi bi-linkedin fs-4"></i
-            ></a>
-            <a href="https://github.com/mazlumunay" class="social-icon mx-2"
-              ><i class="bi bi-github fs-4"></i
-            ></a>
-            <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2"
-              ><i class="bi bi-envelope fs-4"></i
-            ></a>
-            <a
-              href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en"
-              class="social-icon mx-2"
-              ><i class="bi bi-google fs-4"></i
-            ></a>
-            <a
-              href="https://www.researchgate.net/profile/Mazlum-Unay"
-              class="social-icon mx-2"
-              ><i class="bi bi-mortarboard fs-4"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/mazyy47/"
-              class="social-icon mx-2"
-              ><i class="bi bi-instagram fs-4"></i
-            ></a>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-center justify-content-md-end gap-3 flex-wrap">
+              <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon" aria-label="LinkedIn">
+                <i class="bi bi-linkedin fs-4"></i>
+              </a>
+              <a href="https://github.com/mazlumunay" class="social-icon" aria-label="GitHub">
+                <i class="bi bi-github fs-4"></i>
+              </a>
+              <a href="mailto:unaymazlum@gmail.com" class="social-icon" aria-label="Email">
+                <i class="bi bi-envelope fs-4"></i>
+              </a>
+              <a href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en" class="social-icon" aria-label="Google Scholar">
+                <i class="bi bi-google fs-4"></i>
+              </a>
+              <a href="https://www.researchgate.net/profile/Mazlum-Unay" class="social-icon" aria-label="ResearchGate">
+                <i class="bi bi-mortarboard fs-4"></i>
+              </a>
+              <a href="https://www.instagram.com/mazyy47/" class="social-icon" aria-label="Instagram">
+                <i class="bi bi-instagram fs-4"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-
+    
     <script>
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+      // Enhanced form submission with better UX
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
 
-          // Get form values
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const subject = document.getElementById("subject").value;
-          const message = document.getElementById("message").value;
+        // Get all form values
+        const formData = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          company: document.getElementById("company").value,
+          subject: document.getElementById("subject").value,
+          message: document.getElementById("message").value
+        };
 
-          // Here you would typically send the form data to a server
-          // For this example, we'll just log it and show an alert
-          console.log({ name, email, subject, message });
+        // Show loading state
+        const submitBtn = document.querySelector('.btn-submit');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="bi bi-arrow-repeat spin me-2"></i>Sending...';
+        submitBtn.disabled = true;
 
-          alert(
-            `Thank you, ${name}! Your message has been sent. I'll get back to you soon.`
-          );
-
-          // Reset the form
+        // Simulate sending (replace with actual API call)
+        setTimeout(() => {
+          // Reset form and show success
           this.reset();
+          submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Message Sent!';
+          
+          // Show success alert
+          alert(`Thank you, ${formData.name}! Your message about "${formData.subject}" has been received. I'll get back to you within 24 hours.`);
+          
+          // Reset button after 3 seconds
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }, 3000);
+        }, 1500);
+
+        // Log form data for debugging
+        console.log('Form submitted:', formData);
+      });
+
+      // Add CSS for spin animation
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .spin {
+          animation: spin 1s linear infinite;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
         });
+      });
     </script>
   </body>
 </html>
