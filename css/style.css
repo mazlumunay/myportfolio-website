@@ -2230,3 +2230,13 @@ body.contact-page {
       rgba(26, 31, 46, 0.95) 100%
     );
 }
+
+.btn-outline-accent {
+  border-color: #FFD369;
+  color: #FFD369;
+}
+
+.btn-outline-accent:hover {
+  background-color: #FFD369;
+  color: #222831;
+}
