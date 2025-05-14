@@ -29,7 +29,7 @@
     <!--  NAVBAR (Now with transparency and glassmorphism) -->
     <nav
       class="navbar navbar-expand-lg navbar-dark sticky-top"
-      style="transition: all 0.3s ease;"
+      style="transition: all 0.3s ease"
     >
       <div class="container">
         <!-- Logo and Brand Name (left side) -->
@@ -122,65 +122,76 @@
 
     <!-- Hero Section with Enhanced Styling -->
     <div class="position-relative overflow-hidden hero-section">
-        <!-- Main background image container -->
-        <div class="hero-background">
-          <img
-            src="./img/hero1.png"
-            class="w-100 h-100 object-fit-cover hero-main-image"
-            alt="Modern developer workspace"
-          />
-          <!-- Simple gradient overlay -->
-          <div class="hero-overlay"></div>
-        </div>
-  
-        <!-- Hero content container -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end">
-          <div class="container">
-            <div class="row">
-              <!-- Content positioned at bottom -->
-              <div class="col-lg-7">
-                <div class="hero-content">
-                  <!-- Simple badge -->
-                  <div class="hero-badge mb-3">
-                    <span class="badge">
-                      <i class="bi bi-code-slash me-2"></i>Full Stack Developer
-                    </span>
-                  </div>
-  
-                  <!-- Main heading -->
-                  <h1 class="hero-title mb-4">
-                    Crafting Digital Excellence<br/>
-                    Through <span class="text-accent">Innovation</span>
-                  </h1>
-  
-                  <!-- Simple subtitle -->
-                  <p class="hero-subtitle mb-5">
-                    Passionate about creating scalable web applications and digital experiences. 
-                    Currently building inventory systems at <strong>Serpo Technology</strong>.
-                  </p>
-  
-                  <!-- Call-to-action buttons -->
-                  <div class="hero-buttons">
-                    <a href="./public/projects.html" class="btn btn-primary btn-lg me-3">
-                      View My Work <i class="bi bi-arrow-right ms-2"></i>
-                    </a>
-                    <a href="./public/contact.html" class="btn btn-outline-light btn-lg">
-                      Let's Connect <i class="bi bi-chat-left-text ms-2"></i>
-                    </a>
-                  </div>
+      <!-- Main background image container -->
+      <div class="hero-background">
+        <img
+          src="./img/hero1.png"
+          class="w-100 h-100 object-fit-cover hero-main-image"
+          alt="Modern developer workspace"
+        />
+        <!-- Simple gradient overlay -->
+        <div class="hero-overlay"></div>
+      </div>
+
+      <!-- Hero content container -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end"
+      >
+        <div class="container">
+          <div class="row">
+            <!-- Content positioned at bottom -->
+            <div class="col-lg-7">
+              <div class="hero-content">
+                <!-- Simple badge -->
+                <div class="hero-badge mb-3">
+                  <span class="badge">
+                    <i class="bi bi-code-slash me-2"></i>Full Stack Developer
+                  </span>
+                </div>
+
+                <!-- Main heading -->
+                <h1 class="hero-title mb-4">
+                  Crafting Digital Excellence<br />
+                  Through <span class="text-accent">Innovation</span>
+                </h1>
+
+                <!-- Simple subtitle -->
+                <p class="hero-subtitle mb-5">
+                  Passionate about creating scalable web applications and
+                  digital experiences. Currently building inventory systems at
+                  <strong>Serpo Technology</strong>.
+                </p>
+
+                <!-- Call-to-action buttons -->
+                <div class="hero-buttons">
+                  <a
+                    href="./public/projects.html"
+                    class="btn btn-primary btn-lg me-3"
+                  >
+                    View My Work <i class="bi bi-arrow-right ms-2"></i>
+                  </a>
+                  <a
+                    href="./public/contact.html"
+                    class="btn btn-outline-light btn-lg"
+                  >
+                    Let's Connect <i class="bi bi-chat-left-text ms-2"></i>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
-        <!-- Simple scroll indicator -->
-        <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x pb-4">
-          <div class="scroll-arrow text-white">
-            <i class="bi bi-chevron-down fs-4"></i>
-          </div>
+      </div>
+
+      <!-- Simple scroll indicator -->
+      <div
+        class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x pb-4"
+      >
+        <div class="scroll-arrow text-white">
+          <i class="bi bi-chevron-down fs-4"></i>
         </div>
       </div>
+    </div>
 
     <!-- Projects Section with Enhanced Cards -->
     <section id="all-projects" class="py-5 bg-dark-2">
@@ -199,12 +210,14 @@
         <!-- Project 1 - TechForum -->
         <div class="row align-items-center g-5 mb-5">
           <div class="col-lg-6">
-            <div class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative">
+            <div
+              class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative"
+            >
               <img
                 src="img/techforum.png"
                 alt="Screenshot of TechForum discussion platform"
                 class="img-fluid zoom-hover"
-                style="filter: brightness(1.05) contrast(1.1);"
+                style="filter: brightness(1.05) contrast(1.1)"
               />
               <div class="project-badge glass-effect">Featured</div>
             </div>
@@ -213,13 +226,46 @@
             <div class="ps-lg-5">
               <h3 class="fw-bold mb-3 text-white">TechForum</h3>
               <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">Node.js</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">Express</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">MongoDB</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">EJS</span>
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >Node.js</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >Express</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >MongoDB</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >EJS</span
+                >
               </div>
               <p class="mb-4 text-light opacity-90">
-                A comprehensive discussion platform for technology enthusiasts featuring:
+                A comprehensive discussion platform for technology enthusiasts
+                featuring:
               </p>
               <ul class="project-features mb-4">
                 <li class="text-light opacity-95">
@@ -228,7 +274,9 @@
                 <li class="text-light opacity-95">
                   Real-time notifications and activity tracking
                 </li>
-                <li class="text-light opacity-95">Advanced content moderation tools</li>
+                <li class="text-light opacity-95">
+                  Advanced content moderation tools
+                </li>
                 <li class="text-light opacity-95">
                   Responsive design with mobile optimization
                 </li>
@@ -258,12 +306,14 @@
         <!-- Project 2 - Savoria -->
         <div class="row align-items-center g-5 mb-5">
           <div class="col-lg-6 order-1 order-lg-2">
-            <div class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative">
+            <div
+              class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative"
+            >
               <img
                 src="img/savoria-ecommerce.png"
                 alt="Screenshot of Savoria e-commerce platform"
                 class="img-fluid zoom-hover"
-                style="filter: brightness(1.05) contrast(1.1);"
+                style="filter: brightness(1.05) contrast(1.1)"
               />
               <div class="project-badge glass-effect">Featured</div>
             </div>
@@ -272,21 +322,57 @@
             <div class="pe-lg-5">
               <h3 class="fw-bold mb-3 text-white">Savoria E-commerce</h3>
               <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">JavaScript</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">jQuery</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">PHP</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">HTML/CSS</span>
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >JavaScript</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >jQuery</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >PHP</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >HTML/CSS</span
+                >
               </div>
-              <p class="mb-4 text-light opacity-90">An e-commerce platform featuring:</p>
+              <p class="mb-4 text-light opacity-90">
+                An e-commerce platform featuring:
+              </p>
               <ul class="project-features mb-4">
                 <li class="text-light opacity-95">
-                  Intuitive product catalog with advanced filtering and sorting options
+                  Intuitive product catalog with advanced filtering and sorting
+                  options
                 </li>
                 <li class="text-light opacity-95">
                   Secure checkout process for seamless transactions
                 </li>
                 <li class="text-light opacity-95">
-                  Interactive wishlist feature to enhance user experience and retention
+                  Interactive wishlist feature to enhance user experience and
+                  retention
                 </li>
                 <li class="text-light opacity-95">
                   Responsive UI for smooth navigation across different devices
@@ -317,12 +403,14 @@
         <!-- Project 3 - TinDog -->
         <div class="row align-items-center g-5 mb-5">
           <div class="col-lg-6 order-lg-1">
-            <div class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative">
+            <div
+              class="project-image-container rounded-4 overflow-hidden shadow-lg position-relative"
+            >
               <img
                 src="img/tindog.png"
                 alt="Screenshot of TinDog dating app for dog owners"
                 class="img-fluid zoom-hover"
-                style="filter: brightness(1.05) contrast(1.1);"
+                style="filter: brightness(1.05) contrast(1.1)"
               />
               <div class="project-badge glass-effect">Featured</div>
             </div>
@@ -331,10 +419,42 @@
             <div class="ps-lg-5">
               <h3 class="fw-bold mb-3 text-white">TinDog</h3>
               <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">JavaScript</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">Bootstrap 5</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">HTML5</span>
-                <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.2); color: var(--accent-color); border: 1px solid rgba(76, 161, 175, 0.3);">CSS3</span>
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >JavaScript</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >Bootstrap 5</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >HTML5</span
+                >
+                <span
+                  class="badge py-2 px-3"
+                  style="
+                    background-color: rgba(76, 161, 175, 0.2);
+                    color: var(--accent-color);
+                    border: 1px solid rgba(76, 161, 175, 0.3);
+                  "
+                  >CSS3</span
+                >
               </div>
               <p class="mb-4 text-light opacity-90">
                 A fun, mobile-first dating platform for dog owners with:
@@ -343,7 +463,9 @@
                 <li class="text-light opacity-95">
                   Responsive design with Bootstrap 5 components
                 </li>
-                <li class="text-light opacity-95">Smooth animations and transitions</li>
+                <li class="text-light opacity-95">
+                  Smooth animations and transitions
+                </li>
                 <li class="text-light opacity-95">
                   Pricing section with feature comparison
                 </li>
@@ -375,7 +497,11 @@
           <a
             href="./public/projects.html"
             class="btn btn-outline-light btn-lg px-5"
-            style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.05);"
+            style="
+              backdrop-filter: blur(5px);
+              -webkit-backdrop-filter: blur(5px);
+              background-color: rgba(255, 255, 255, 0.05);
+            "
           >
             View Full Portfolio <i class="bi bi-arrow-right ms-2"></i>
           </a>
@@ -402,23 +528,57 @@
                   </div>
                   <div>
                     <div class="d-flex align-items-center gap-2 mb-2">
-                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Featured Research</span>
-                      <small class="text-muted"><i class="bi bi-calendar me-1"></i>2019</small>
+                      <span
+                        class="badge py-2 px-3"
+                        style="
+                          background-color: rgba(76, 161, 175, 0.25);
+                          color: var(--accent-color);
+                        "
+                        >Featured Research</span
+                      >
+                      <small class="text-muted"
+                        ><i class="bi bi-calendar me-1"></i>2019</small
+                      >
                     </div>
                     <h3 class="h4 card-title text-white">
-                      Counting bacteria colonies based on image processing methods
+                      Counting bacteria colonies based on image processing
+                      methods
                     </h3>
                     <p class="text-muted mb-2">
-                      <i class="bi bi-journal-text me-2"></i>Medical Technologies Congress (TIPTEKNO)
+                      <i class="bi bi-journal-text me-2"></i>Medical
+                      Technologies Congress (TIPTEKNO)
                     </p>
                     <p class="card-text text-light mb-3 opacity-90">
-                      This paper presents an automated method for counting bacterial colonies using image processing techniques,
-                      offering a more efficient alternative to manual counting in microbiological studies.
+                      This paper presents an automated method for counting
+                      bacterial colonies using image processing techniques,
+                      offering a more efficient alternative to manual counting
+                      in microbiological studies.
                     </p>
                     <div class="d-flex flex-wrap gap-2 mb-3">
-                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Image Processing</span>
-                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Medical Tech</span>
-                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Automation</span>
+                      <span
+                        class="badge py-2 px-3"
+                        style="
+                          background-color: rgba(76, 161, 175, 0.25);
+                          color: var(--accent-color);
+                        "
+                        >Image Processing</span
+                      >
+                      <span
+                        class="badge py-2 px-3"
+                        style="
+                          background-color: rgba(76, 161, 175, 0.25);
+                          color: var(--accent-color);
+                        "
+                        >Medical Tech</span
+                      >
+                      <span
+                        class="badge py-2 px-3"
+                        style="
+                          background-color: rgba(76, 161, 175, 0.25);
+                          color: var(--accent-color);
+                        "
+                        >Automation</span
+                      >
                     </div>
                     <a
                       href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pn4cZR0AAAAJ&citation_for_view=pn4cZR0AAAAJ:W7OEmFMy1HYC"
@@ -442,19 +602,43 @@
                   </div>
                   <div>
                     <h3 class="h4 card-title text-white">
-                      Designing an obstacle detection and alerting system for visually impaired people on sidewalks
+                      Designing an obstacle detection and alerting system for
+                      visually impaired people on sidewalks
                     </h3>
                     <p class="text-muted mb-2">
-                      <i class="bi bi-calendar me-2"></i>Medical Technologies Congress (TIPTEKNO) • 2019
+                      <i class="bi bi-calendar me-2"></i>Medical Technologies
+                      Congress (TIPTEKNO) • 2019
                     </p>
                     <p class="card-text text-light mb-3 opacity-90">
-                      A novel system designed to help visually impaired individuals navigate sidewalks safely by detecting
+                      A novel system designed to help visually impaired
+                      individuals navigate sidewalks safely by detecting
                       obstacles and providing appropriate alerts.
                     </p>
                     <div class="d-flex flex-wrap gap-2 mb-3">
-                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Assistive Tech</span>
-                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Computer Vision</span>
-                      <span class="badge py-2 px-3" style="background-color: rgba(76, 161, 175, 0.25); color: var(--accent-color);">Accessibility</span>
+                      <span
+                        class="badge py-2 px-3"
+                        style="
+                          background-color: rgba(76, 161, 175, 0.25);
+                          color: var(--accent-color);
+                        "
+                        >Assistive Tech</span
+                      >
+                      <span
+                        class="badge py-2 px-3"
+                        style="
+                          background-color: rgba(76, 161, 175, 0.25);
+                          color: var(--accent-color);
+                        "
+                        >Computer Vision</span
+                      >
+                      <span
+                        class="badge py-2 px-3"
+                        style="
+                          background-color: rgba(76, 161, 175, 0.25);
+                          color: var(--accent-color);
+                        "
+                        >Accessibility</span
+                      >
                     </div>
                     <a
                       href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pn4cZR0AAAAJ&citation_for_view=pn4cZR0AAAAJ:Tyk-4Ss8FVUC"
@@ -473,7 +657,11 @@
           <a
             href="./public/publications.html"
             class="btn btn-outline-light btn-lg px-4"
-            style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.05);"
+            style="
+              backdrop-filter: blur(5px);
+              -webkit-backdrop-filter: blur(5px);
+              background-color: rgba(255, 255, 255, 0.05);
+            "
           >
             View All Publications <i class="bi bi-arrow-right ms-2"></i>
           </a>
@@ -495,21 +683,23 @@
               src="https://ghchart.rshah.org/mazlumunay?color1=1a0000&color2=ff3333&color3=ff0000"
               alt="GitHub Contributions"
               class="img-fluid mb-4 rounded-3"
-              style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"
+              style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))"
             />
 
-            <div class="d-flex flex-wrap justify-content-center gap-4 github-stats-container">
+            <div
+              class="d-flex flex-wrap justify-content-center gap-4 github-stats-container"
+            >
               <img
                 src="https://github-readme-stats.vercel.app/api?username=mazlumunay&show_icons=true&theme=dark"
                 alt="GitHub Stats"
                 class="img-fluid rounded-3"
-                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"
+                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))"
               />
               <img
                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=mazlumunay&layout=compact&theme=dark"
                 alt="Top Languages"
                 class="img-fluid rounded-3"
-                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"
+                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))"
               />
             </div>
           </div>
@@ -520,7 +710,9 @@
     <!-- Call to Action -->
     <section class="cta-transparent py-5">
       <div class="container py-5 text-center">
-        <h2 class="display-4 fw-bold mb-4 text-white">Ready to Start a Project?</h2>
+        <h2 class="display-4 fw-bold mb-4 text-white">
+          Ready to Start a Project?
+        </h2>
         <p class="lead mb-5 text-light opacity-90">
           I'm available for freelance work and full-time opportunities.
         </p>
@@ -528,7 +720,10 @@
           <a href="./public/contact.html" class="btn btn-primary btn-lg px-5">
             Get In Touch <i class="bi bi-chat-left-text ms-2"></i>
           </a>
-          <a href="./public/projects.html" class="btn btn-outline-light btn-lg px-5">
+          <a
+            href="./public/projects.html"
+            class="btn btn-outline-light btn-lg px-5"
+          >
             View Portfolio <i class="bi bi-arrow-right ms-2"></i>
           </a>
         </div>
@@ -540,22 +735,54 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0 opacity-90">&copy; 2025 Mazlum Unay. All rights reserved.</p>
+            <p class="mb-0 opacity-90">
+              &copy; 2025 Mazlum Unay. All rights reserved.
+            </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
-            <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon mx-2" title="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/mazlumunay/"
+              class="social-icon mx-2"
+              title="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-linkedin fs-4"></i>
             </a>
-            <a href="https://github.com/mazlumunay" class="social-icon mx-2" title="GitHub">
+            <a
+              href="https://github.com/mazlumunay"
+              class="social-icon mx-2"
+              title="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-github fs-4"></i>
             </a>
-            <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2" title="Email">
+            <a
+              href="mailto:unaymazlum@gmail.com"
+              class="social-icon mx-2"
+              title="Email"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-envelope fs-4"></i>
             </a>
-            <a href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en" class="social-icon mx-2" title="Google Scholar">
+            <a
+              href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en"
+              class="social-icon mx-2"
+              title="Google Scholar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-mortarboard fs-4"></i>
             </a>
-            <a href="https://www.researchgate.net/profile/Mazlum-Unay" class="social-icon mx-2" title="ResearchGate">
+            <a
+              href="https://www.researchgate.net/profile/Mazlum-Unay"
+              class="social-icon mx-2"
+              title="ResearchGate"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-journal-text fs-4"></i>
             </a>
           </div>
@@ -564,15 +791,15 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Optional: Add scroll effect for navbar -->
     <script>
-      window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
         if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
+          navbar.classList.add("scrolled");
         } else {
-          navbar.classList.remove('scrolled');
+          navbar.classList.remove("scrolled");
         }
       });
     </script>

@@ -31,106 +31,130 @@
   </head>
   <body class="about-page">
     <!--  NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background-color: rgba(34, 40, 49, 0.98); backdrop-filter: blur(5px);">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="../index.html">
-        <svg
-          width="36"
-          height="36"
-          viewBox="0 0 120 120"
-          xmlns="http://www.w3.org/2000/svg"
-          class="d-inline-block me-2 transition-all"
-          style="transition: transform 0.3s ease;"
-        >
-          <rect width="120" height="120" rx="20" fill="#222831" />
-          <text
-            x="50%"
-            y="50%"
-            dominant-baseline="middle"
-            text-anchor="middle"
-            font-size="48"
-            font-family="Arial, Helvetica, sans-serif"
-            fill="#FFD369"
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
+      style="
+        background-color: rgba(34, 40, 49, 0.98);
+        backdrop-filter: blur(5px);
+      "
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            class="d-inline-block me-2 transition-all"
+            style="transition: transform 0.3s ease"
           >
-            MU
-          </text>
-        </svg>
-        <span class="fw-bold text-uppercase d-none d-sm-inline">Mazlum Unay</span>
-      </a>
-      
-      <button
-        class="navbar-toggler border-0"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item mx-1">
-            <a class="nav-link position-relative px-3 py-2" href="../index.html">
-              <span class="position-relative">Home</span>
-            </a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link position-relative px-3 py-2" href="./projects.html">
-              <span class="position-relative">Projects</span>
-            </a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link position-relative px-3 py-2" href="./publications.html">
-              <span class="position-relative">Publications</span>
-            </a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link position-relative px-3 py-2 active" href="./about.html">
-              <span class="position-relative">About</span>
-            </a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link position-relative px-3 py-2" href="./contact.html">
-              <span class="position-relative">Contact</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
+            <rect width="120" height="120" rx="20" fill="#222831" />
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              font-size="48"
+              font-family="Arial, Helvetica, sans-serif"
+              fill="#FFD369"
+            >
+              MU
+            </text>
+          </svg>
+          <span class="fw-bold text-uppercase d-none d-sm-inline"
+            >Mazlum Unay</span
+          >
+        </a>
 
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="../index.html"
+              >
+                <span class="position-relative">Home</span>
+              </a>
+            </li>
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="./projects.html"
+              >
+                <span class="position-relative">Projects</span>
+              </a>
+            </li>
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="./publications.html"
+              >
+                <span class="position-relative">Publications</span>
+              </a>
+            </li>
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link position-relative px-3 py-2 active"
+                href="./about.html"
+              >
+                <span class="position-relative">About</span>
+              </a>
+            </li>
+            <li class="nav-item mx-1">
+              <a
+                class="nav-link position-relative px-3 py-2"
+                href="./contact.html"
+              >
+                <span class="position-relative">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!-- Profile Header -->
-<div class="profile-header text-center">
-  <div class="container">
-    <h1>Mazlum Unay</h1>
-    <img
-      src="../img/avatar.png"
-      alt="Mazlum Unay"
-      class="profile-img rounded-circle mb-3"
-    />
-    <p class="lead">Full Stack Software Developer</p>
-    <!-- ADD TAGLINE HERE -->
-    <p class="text-muted mb-4" style="font-size: 1.1rem; font-weight: 300; letter-spacing: 0.5px;">
-      Engineering Background • Software Innovation • Toronto-Based
-    </p>
-    <div class="d-flex justify-content-center gap-3">
-      <a href="https://www.linkedin.com/in/mazlumunay/" class="text-white"
-        ><i class="bi bi-linkedin fs-4"></i
-      ></a>
-      <a href="https://github.com/mazlumunay" class="text-white"
-        ><i class="bi bi-github fs-4"></i
-      ></a>
-      <a href="mailto:unaymazlum@gmail.com" class="text-white"
-        ><i class="bi bi-envelope fs-4"></i
-      ></a>
+    <div class="profile-header text-center">
+      <div class="container">
+        <h1>Mazlum Unay</h1>
+        <img
+          src="../img/avatar.png"
+          alt="Mazlum Unay"
+          class="profile-img rounded-circle mb-3"
+        />
+        <p class="lead">Full Stack Software Developer</p>
+        <!-- ADD TAGLINE HERE -->
+        <p
+          class="text-muted mb-4"
+          style="font-size: 1.1rem; font-weight: 300; letter-spacing: 0.5px"
+        >
+          Engineering Background • Software Innovation • Toronto-Based
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="https://www.linkedin.com/in/mazlumunay/" class="text-white"
+            ><i class="bi bi-linkedin fs-4"></i
+          ></a>
+          <a href="https://github.com/mazlumunay" class="text-white"
+            ><i class="bi bi-github fs-4"></i
+          ></a>
+          <a href="mailto:unaymazlum@gmail.com" class="text-white"
+            ><i class="bi bi-envelope fs-4"></i
+          ></a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     <!-- Main Content -->
     <div class="container">
@@ -139,7 +163,23 @@
           <!-- My Professional Journey -->
           <h2 class="section-title">My Professional Journey</h2>
           <p class="lead">
-            My path to software development began with a strong foundation in Electrical and Electronics Engineering, where I earned both my Bachelor's and Master's degrees from Dokuz Eylul University in Turkey. During my five years as a Software Engineer at Katip Çelebi University, I discovered my passion for developing scalable solutions and integrating new technologies into existing systems. Seeking to deepen my expertise in modern web development, I made the bold decision to move to Canada and pursue a Graduate Certificate in Full Stack Software Development at Lambton College, where I graduated with Dean's Honor List recognition. This transformation allowed me to bridge my engineering background with cutting-edge software development skills, leading to my current role as a Full Stack Developer at Serpo Technology in Toronto. My journey from engineering fundamentals to full-stack development has equipped me with a unique perspective on problem-solving, combining analytical thinking with practical software solutions to create meaningful user experiences.
+            My path to software development began with a strong foundation in
+            Electrical and Electronics Engineering, where I earned both my
+            Bachelor's and Master's degrees from Dokuz Eylul University in
+            Turkey. During my five years as a Software Engineer at Katip Çelebi
+            University, I discovered my passion for developing scalable
+            solutions and integrating new technologies into existing systems.
+            Seeking to deepen my expertise in modern web development, I made the
+            bold decision to move to Canada and pursue a Graduate Certificate in
+            Full Stack Software Development at Lambton College, where I
+            graduated with Dean's Honor List recognition. This transformation
+            allowed me to bridge my engineering background with cutting-edge
+            software development skills, leading to my current role as a Full
+            Stack Developer at Serpo Technology in Toronto. My journey from
+            engineering fundamentals to full-stack development has equipped me
+            with a unique perspective on problem-solving, combining analytical
+            thinking with practical software solutions to create meaningful user
+            experiences.
           </p>
 
           <!-- Professional Summary -->
@@ -387,22 +427,54 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0 opacity-90">&copy; 2025 Mazlum Unay. All rights reserved.</p>
+            <p class="mb-0 opacity-90">
+              &copy; 2025 Mazlum Unay. All rights reserved.
+            </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
-            <a href="https://www.linkedin.com/in/mazlumunay/" class="social-icon mx-2" title="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/mazlumunay/"
+              class="social-icon mx-2"
+              title="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-linkedin fs-4"></i>
             </a>
-            <a href="https://github.com/mazlumunay" class="social-icon mx-2" title="GitHub">
+            <a
+              href="https://github.com/mazlumunay"
+              class="social-icon mx-2"
+              title="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-github fs-4"></i>
             </a>
-            <a href="mailto:unaymazlum@gmail.com" class="social-icon mx-2" title="Email">
+            <a
+              href="mailto:unaymazlum@gmail.com"
+              class="social-icon mx-2"
+              title="Email"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-envelope fs-4"></i>
             </a>
-            <a href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en" class="social-icon mx-2" title="Google Scholar">
+            <a
+              href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en"
+              class="social-icon mx-2"
+              title="Google Scholar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-mortarboard fs-4"></i>
             </a>
-            <a href="https://www.researchgate.net/profile/Mazlum-Unay" class="social-icon mx-2" title="ResearchGate">
+            <a
+              href="https://www.researchgate.net/profile/Mazlum-Unay"
+              class="social-icon mx-2"
+              title="ResearchGate"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="bi bi-journal-text fs-4"></i>
             </a>
           </div>
