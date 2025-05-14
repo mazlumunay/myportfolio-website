@@ -2240,3 +2240,531 @@ body.contact-page {
   background-color: #FFD369;
   color: #222831;
 }
+/* =============================================
+     PROFESSIONAL HERO SECTION FOR ABOUT PAGE
+     ============================================= */
+
+/* Enhanced Profile Header - Professional & Harmonious */
+.profile-header {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(26, 31, 46, 0.95) 0%, 
+    rgba(44, 54, 89, 0.9) 35%, 
+    rgba(26, 31, 46, 0.95) 100%
+  );
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  padding: 5rem 0;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle Professional Background Pattern */
+.profile-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(76, 161, 175, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 211, 105, 0.03) 0%, transparent 50%);
+  background-size: 200px 200px, 150px 150px;
+  animation: subtleFloat 40s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Minimal Grid Overlay for Professional Look */
+.profile-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Content Layer */
+.profile-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Professional Profile Image */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border: 3px solid rgba(76, 161, 175, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(76, 161, 175, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  object-fit: cover;
+}
+
+.profile-img:hover {
+  transform: translateY(-5px);
+  border-color: rgba(76, 161, 175, 0.5);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(76, 161, 175, 0.15);
+}
+
+/* Typography Refinements */
+.profile-header h1 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header .lead {
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+  letter-spacing: 0.3px;
+}
+
+/* Enhanced Tagline Styling */
+.tagline-container {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.tagline-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  opacity: 0.95;
+}
+
+.tagline-highlight {
+  color: var(--accent-color);
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tagline-highlight:hover {
+  color: var(--accent-secondary);
+  text-shadow: 0 0 8px rgba(76, 161, 175, 0.3);
+}
+
+.tagline-separator {
+  color: var(--text-muted);
+  margin: 0 0.75rem;
+  opacity: 0.7;
+}
+
+.tagline-location {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.tagline-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Professional Social Links */
+.profile-header .d-flex a {
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.profile-header .d-flex a:hover {
+  background: rgba(76, 161, 175, 0.15);
+  border-color: rgba(76, 161, 175, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(76, 161, 175, 0.1);
+  color: var(--text-light);
+}
+
+/* Subtle Animation */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* =============================================
+     ENHANCED CONTENT SECTIONS
+     ============================================= */
+
+/* Professional Summary Section */
+.about-page .lead:first-of-type {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(76, 161, 175, 0.1);
+  border-left: 4px solid var(--accent-color);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Section Titles Professional Enhancement */
+.section-title {
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin: 3rem 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(76, 161, 175, 0.2);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+}
+
+/* Professional Timeline */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    rgba(76, 161, 175, 0.3) 0%, 
+    rgba(76, 161, 175, 0.1) 50%,
+    rgba(76, 161, 175, 0.3) 100%
+  );
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(76, 161, 175, 0.1);
+  transform: translateX(5px);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -58px;
+  top: 1.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  border: 3px solid var(--primary-dark);
+  box-shadow: 0 0 0 3px rgba(76, 161, 175, 0.2);
+}
+
+.timeline-item h4 {
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item h5 {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item .text-muted {
+  color: var(--text-secondary) !important;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.timeline-item ul {
+  margin-bottom: 0;
+}
+
+.timeline-item li {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+/* Professional Skills Grid */
+.about-page .mb-4 {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem !important;
+  transition: all 0.3s ease;
+}
+
+.about-page .mb-4:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(76, 161, 175, 0.1);
+}
+
+.about-page .mb-4 h5 {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Refined Skill Badges */
+.skill-badge {
+  background: linear-gradient(135deg, 
+    rgba(76, 161, 175, 0.8) 0%, 
+    rgba(76, 161, 175, 0.9) 100%
+  );
+  color: white;
+  padding: 8px 16px;
+  margin: 4px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.skill-badge:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, 
+    var(--accent-color) 0%, 
+    rgba(76, 161, 175, 1) 100%
+  );
+  box-shadow: 0 4px 12px rgba(76, 161, 175, 0.2);
+}
+
+.skill-badge i {
+  margin-right: 0.5rem;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* =============================================
+     RESPONSIVE PROFESSIONAL DESIGN
+     ============================================= */
+
+@media (max-width: 992px) {
+  .profile-header {
+    padding: 4rem 0;
+  }
+  
+  .profile-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .timeline {
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    left: 15px;
+  }
+  
+  .timeline-item::before {
+    left: -43px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    padding: 3rem 0;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .profile-header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .profile-header .lead {
+    font-size: 1.1rem;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .timeline-item {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+  }
+  
+  .about-page .mb-4 {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .skill-badge {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin: 3px;
+  }
+  
+  /* Responsive tagline adjustments */
+  .tagline-text {
+    font-size: 1rem;
+  }
+  
+  .tagline-separator {
+    margin: 0 0.5rem;
+  }
+  
+  .tagline-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-header .lead {
+    font-size: 1rem;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-header .d-flex a {
+    width: 44px;
+    height: 44px;
+    margin: 0 0.25rem;
+  }
+  
+  .timeline-item {
+    padding: 1rem;
+  }
+  
+  .tagline-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .tagline-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+/* =============================================
+     CONTENT HARMONY ENHANCEMENTS
+     ============================================= */
+
+/* Ensure consistent text styling throughout */
+.about-page p {
+  color: var(--text-light);
+  line-height: 1.7;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+.about-page .text-muted {
+  color: var(--text-secondary) !important;
+  opacity: 0.8;
+}
+
+/* Professional content spacing */
+.col-lg-8.mx-auto > * {
+  margin-bottom: 1.5rem;
+}
+
+.col-lg-8.mx-auto > .section-title {
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.col-lg-8.mx-auto > .section-title:first-child {
+  margin-top: 0;
+}
+
+/* Subtle hover effects for better interactivity */
+.about-page .col-lg-8 > div:hover,
+.about-page .col-lg-8 > p:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+/* Enhanced glassmorphism for main content container */
+.about-page .container > .row > .col-lg-8 {
+  background: rgba(26, 31, 46, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-top: 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
