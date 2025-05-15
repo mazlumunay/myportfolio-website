@@ -754,10 +754,11 @@
   position: relative;
   z-index: 2;
 }
-  /* =============================================
-     ANIMATIONS
-     ============================================= */
-  @keyframes fadeInUp {
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+   @keyframes fadeInUp {
     from {
       opacity: 0;
       transform: translateY(30px);
@@ -792,8 +793,16 @@
     }
   }
   
+  /* Hero Animation Fix - Simple Version */
   .fade-in-up {
-    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .scroll-arrow {
