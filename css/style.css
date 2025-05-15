@@ -724,74 +724,36 @@
   }
   
   /* =============================================
-     TRANSPARENT SECTIONS
-     ============================================= */
-  #all-projects,
-  #publications {
-    background: transparent !important;
-    position: relative;
-    z-index: 2;
-  }
-  
-  #all-projects::before,
-  #publications::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(26, 31, 46, 0.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    z-index: -1;
-  }
-  
-  .bg-dark-2 {
-    background: transparent !important;
-    position: relative;
-    z-index: 2;
-  }
-  
-  .bg-dark-2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(26, 31, 46, 0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    z-index: -1;
-  }
-  
-  .cta-transparent {
-    background: transparent !important;
-    color: var(--text-light);
-    padding: 5rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .cta-transparent::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(26, 31, 46, 0.08);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    z-index: 1;
-  }
-  
-  .cta-transparent .container {
-    position: relative;
-    z-index: 2;
-  }
-  
+   TRANSPARENT SECTIONS
+   ============================================= */
+#all-projects,
+#publications {
+  background: transparent !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Remove the pseudo-element backgrounds that were adding the overlay */
+#all-projects::before,
+#publications::before {
+  display: none; /* Simply hide the overlays */
+}
+
+.bg-dark-2 {
+  background: transparent !important;
+  position: relative;
+  z-index: 2;
+}
+
+.bg-dark-2::before {
+  display: none; /* Hide the overlay here too */
+}
+
+.bg-dark-3 {
+  background: transparent !important;
+  position: relative;
+  z-index: 2;
+}
   /* =============================================
      ANIMATIONS
      ============================================= */
@@ -1193,3 +1155,41 @@
     background: rgba(76, 161, 175, 0.3);
     color: white;
   }
+
+  /* =============================================
+   CONTENT FRAMES
+   ============================================= */
+
+/* Frame around Projects Content */
+#all-projects .container {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: var(--transition-base);
+}
+
+#all-projects .container:hover {
+  background: transparent;
+  border-color: rgba(76, 161, 175, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Frame around Publications Content */
+#publications .container {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: var(--transition-base);
+}
+
+#publications .container:hover {
+  background: transparent;
+  border-color: rgba(76, 161, 175, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
