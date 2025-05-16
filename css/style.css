@@ -438,7 +438,7 @@ small {
 /* Homepage Hero Section Specific Styles */
 .hero {
   min-height: 100vh;
-  padding-top: 76px;
+  padding-top: 40px;
   background: transparent;
   position: relative;
   overflow: hidden;
