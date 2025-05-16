@@ -18,7 +18,9 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%231a1f2e'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>"
     />
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Preconnect to Google Fonts if you're using them -->
@@ -123,191 +125,56 @@
     <!-- Hero Section -->
     <section
       class="hero text-white overflow-hidden position-relative"
-      style="min-height: 100vh; padding-top: 76px; background: transparent"
     >
       <!-- Background Effects -->
-      <div
-        class="hero-background position-absolute w-100 h-100"
-        style="top: 0; left: 0; z-index: 1; opacity: 0.7"
-      >
+      <div class="hero-background">
         <!-- Gradient Mesh -->
-        <div
-          class="position-absolute"
-          style="
-            top: 10%;
-            right: 15%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(
-              circle,
-              rgba(76, 161, 175, 0.15) 0%,
-              rgba(76, 161, 175, 0.05) 40%,
-              transparent 100%
-            );
-            border-radius: 50%;
-            filter: blur(60px);
-          "
-        ></div>
-        <div
-          class="position-absolute"
-          style="
-            bottom: 20%;
-            left: 10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(
-              circle,
-              rgba(255, 211, 105, 0.1) 0%,
-              rgba(255, 211, 105, 0.03) 40%,
-              transparent 100%
-            );
-            border-radius: 50%;
-            filter: blur(80px);
-          "
-        ></div>
+        <div class="hero-mesh-1"></div>
+        <div class="hero-mesh-2"></div>
 
         <!-- Floating Particles -->
-        <div class="floating-particles position-absolute w-100 h-100">
-          <div
-            class="particle position-absolute"
-            style="
-              top: 15%;
-              left: 20%;
-              width: 4px;
-              height: 4px;
-              background: #4ca1af;
-              border-radius: 50%;
-              animation: float 6s ease-in-out infinite;
-            "
-          ></div>
-          <div
-            class="particle position-absolute"
-            style="
-              top: 30%;
-              right: 25%;
-              width: 3px;
-              height: 3px;
-              background: #ffd369;
-              border-radius: 50%;
-              animation: float 8s ease-in-out infinite reverse;
-            "
-          ></div>
-          <div
-            class="particle position-absolute"
-            style="
-              bottom: 25%;
-              left: 30%;
-              width: 5px;
-              height: 5px;
-              background: rgba(76, 161, 175, 0.6);
-              border-radius: 50%;
-              animation: float 7s ease-in-out infinite;
-            "
-          ></div>
-          <div
-            class="particle position-absolute"
-            style="
-              bottom: 40%;
-              right: 20%;
-              width: 3px;
-              height: 3px;
-              background: rgba(255, 211, 105, 0.8);
-              border-radius: 50%;
-              animation: float 9s ease-in-out infinite reverse;
-            "
-          ></div>
+        <div class="floating-particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
         </div>
       </div>
 
-      <div class="container h-100 position-relative" style="z-index: 3">
-        <div
-          class="row align-items-center h-100 g-0"
-          style="min-height: calc(100vh - 76px)"
-        >
+      <div class="container h-100 position-relative">
+        <div class="row align-items-center h-100 g-0">
           <!-- Left Column: Text Content -->
           <div class="col-lg-6 col-xl-7">
             <div class="hero-content py-5 pe-lg-4">
               <!-- Badge with enhanced styling -->
-              <div
-                class="hero-badge mb-4"
-                style="animation: fadeInUp 1s ease-out"
-              >
-                <span
-                  class="badge text-uppercase px-4 py-3 fw-semibold position-relative"
-                  style="
-                    background: linear-gradient(
-                      135deg,
-                      rgba(76, 161, 175, 0.2),
-                      rgba(76, 161, 175, 0.1)
-                    );
-                    color: #4ca1af;
-                    border: 1px solid rgba(76, 161, 175, 0.3);
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(10px);
-                    border-radius: 50px;
-                    font-size: 0.9rem;
-                    letter-spacing: 0.5px;
-                  "
-                >
+              <div class="hero-badge">
+                <span class="badge text-uppercase px-4 py-3 fw-semibold position-relative">
                   <i class="bi bi-code-slash me-2"></i> Full Stack Developer
                 </span>
               </div>
 
               <!-- Enhanced Heading -->
-              <h1
-                class="hero-title display-4 fw-bold mb-4 text-white"
-                style="
-                  animation: fadeInUp 1s ease-out 0.2s both;
-                  line-height: 1.2;
-                "
-              >
+              <h1 class="hero-title display-4 fw-bold mb-4 text-white">
                 Building the Future<br />
-                of <span style="color: #4ca1af">Web Development</span><br />
-                One Line at a <span style="color: #ffd369">Time</span>
+                of <span class="text-accent">Web Development</span><br />
+                One Line at a <span class="text-yellow">Time</span>
               </h1>
 
               <!-- Enhanced Subtitle -->
-              <div
-                class="hero-subtitle-container position-relative mb-5"
-                style="animation: fadeInUp 1s ease-out 0.4s both"
-              >
-                <p
-                  class="hero-subtitle fs-5 text-light"
-                  style="
-                    opacity: 0.9;
-                    line-height: 1.7;
-                    margin: 0;
-                    background: linear-gradient(
-                      135deg,
-                      rgba(255, 255, 255, 0.08),
-                      rgba(255, 255, 255, 0.03)
-                    );
-                    padding: 1.5rem;
-                    border-radius: 15px;
-                    backdrop-filter: blur(5px);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                  "
-                >
+              <div class="hero-subtitle-container position-relative">
+                <p class="hero-subtitle fs-5 text-light">
                   Transforming ideas into powerful digital solutions.
                   Specializing in
-                  <strong style="color: #4ca1af"
-                    >modern web technologies</strong
-                  >
+                  <strong class="text-accent">modern web technologies</strong>
                   and
-                  <strong style="color: #ffd369">scalable architectures</strong>
+                  <strong class="text-yellow">scalable architectures</strong>
                   at Serpo Technology.
                 </p>
               </div>
 
               <!-- Tech Stack Tags -->
-              <div
-                class="tech-stack mb-5"
-                style="animation: fadeInUp 1s ease-out 0.5s both"
-              >
-                <p
-                  class="text-light mb-3"
-                  style="opacity: 0.8; font-size: 0.9rem; letter-spacing: 0.5px"
-                >
+              <div class="tech-stack">
+                <p class="text-light mb-3">
                   TECH STACK:
                 </p>
                 <div class="d-flex flex-wrap gap-2">
@@ -321,66 +188,19 @@
               </div>
 
               <!-- Enhanced CTA Buttons -->
-              <div
-                class="hero-buttons d-flex flex-wrap gap-4"
-                style="animation: fadeInUp 1s ease-out 0.6s both"
-              >
+              <div class="hero-buttons d-flex flex-wrap gap-4">
                 <a
                   href="./public/projects.html"
-                  class="btn btn-lg px-5 py-3 position-relative overflow-hidden"
-                  style="
-                    background: linear-gradient(135deg, #4ca1af, #367e8a);
-                    border: none;
-                    color: white;
-                    transition: all 0.3s ease;
-                    border-radius: 50px;
-                    font-weight: 600;
-                    letter-spacing: 0.5px;
-                    box-shadow: 0 4px 15px rgba(76, 161, 175, 0.3);
-                  "
-                  onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(76, 161, 175, 0.5)';"
-                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(76, 161, 175, 0.3)';"
+                  class="btn btn-primary btn-lg px-5 py-3 position-relative overflow-hidden"
                 >
-                  <span class="position-relative" style="z-index: 2"
-                    >Explore Projects <i class="bi bi-arrow-right ms-2"></i
-                  ></span>
-                  <div
-                    class="position-absolute top-0 start-0 w-100 h-100"
-                    style="
-                      background: linear-gradient(
-                        135deg,
-                        transparent,
-                        rgba(255, 255, 255, 0.1)
-                      );
-                      transform: translateX(-100%);
-                      transition: transform 0.3s ease;
-                      border-radius: 50px;
-                    "
-                    onmouseenter="this.style.transform='translateX(0)';"
-                    onmouseleave="this.style.transform='translateX(-100%)';"
-                  ></div>
+                  <span class="position-relative">
+                    Explore Projects <i class="bi bi-arrow-right ms-2"></i>
+                  </span>
                 </a>
 
                 <a
                   href="./public/contact.html"
                   class="btn btn-outline-light btn-lg px-5 py-3 position-relative"
-                  style="
-                    transition: all 0.3s ease;
-                    backdrop-filter: blur(10px);
-                    background: linear-gradient(
-                      135deg,
-                      rgba(255, 255, 255, 0.1),
-                      rgba(255, 255, 255, 0.05)
-                    );
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    border-radius: 50px;
-                    font-weight: 600;
-                    letter-spacing: 0.5px;
-                  "
-                  onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='translateY(-3px)';
-                           this.style.boxShadow='0 8px 25px rgba(255, 255, 255, 0.1)';"
-                  onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.05)'; this.style.transform='translateY(0)';
-                          this.style.boxShadow='none';"
                 >
                   Let's Collaborate <i class="bi bi-chat-left-text ms-2"></i>
                 </a>
@@ -389,228 +209,90 @@
           </div>
 
           <!-- Right Column: Creative Visual Design -->
-          <div
-            class="col-lg-6 col-xl-5 d-flex justify-content-center align-items-center"
-          >
-            <div
-              class="hero-visual position-relative"
-              style="animation: fadeInRight 1s ease-out 0.8s both"
-            >
+          <div class="col-lg-6 col-xl-5 d-flex justify-content-center align-items-center">
+            <div class="hero-visual position-relative">
               <!-- Code Editor Mockup -->
-              <div
-                class="code-editor-mockup position-relative"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(26, 31, 46, 0.95),
-                    rgba(26, 31, 46, 0.85)
-                  );
-                  border-radius: 15px;
-                  padding: 20px;
-                  width: 100%;
-                  max-width: 450px;
-                  backdrop-filter: blur(10px);
-                  border: 1px solid rgba(76, 161, 175, 0.2);
-                  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-                "
-              >
+              <div class="code-editor-mockup position-relative">
                 <!-- Editor Header -->
-                <div
-                  class="editor-header d-flex align-items-center mb-3 pb-3"
-                  style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-                >
-                  <div class="d-flex gap-2">
-                    <div
-                      style="
-                        width: 12px;
-                        height: 12px;
-                        background: #ff5f56;
-                        border-radius: 50%;
-                      "
-                    ></div>
-                    <div
-                      style="
-                        width: 12px;
-                        height: 12px;
-                        background: #ffbd2e;
-                        border-radius: 50%;
-                      "
-                    ></div>
-                    <div
-                      style="
-                        width: 12px;
-                        height: 12px;
-                        background: #27ca3f;
-                        border-radius: 50%;
-                      "
-                    ></div>
+                <div class="editor-header d-flex align-items-center mb-3 pb-3">
+                  <div class="traffic-lights d-flex gap-2">
+                    <div class="traffic-light red"></div>
+                    <div class="traffic-light yellow"></div>
+                    <div class="traffic-light green"></div>
                   </div>
-                  <span class="ms-auto text-light opacity-75 small"
-                    >portfolio.js</span
-                  >
+                  <span class="file-name ms-auto">portfolio.js</span>
                 </div>
 
                 <!-- Code Lines -->
                 <div class="code-lines">
                   <div class="code-line mb-2">
-                    <span style="color: #569cd6">const</span>
-                    <span style="color: #9cdcfe"> developer</span>
-                    <span style="color: #d4d4d4"> = {</span>
+                    <span class="code-keyword">const</span>
+                    <span class="code-variable"> developer</span>
+                    <span class="code-punctuation"> = {</span>
                   </div>
-                  <div class="code-line mb-2 ms-3">
-                    <span style="color: #92c5f8">name:</span>
-                    <span style="color: #ce9178">'Mazlum Unay'</span
-                    ><span style="color: #d4d4d4">,</span>
+                  <div class="code-line mb-2 code-indent">
+                    <span class="code-property">name:</span>
+                    <span class="code-string">'Mazlum Unay'</span>
+                    <span class="code-punctuation">,</span>
                   </div>
-                  <div class="code-line mb-2 ms-3">
-                    <span style="color: #92c5f8">role:</span>
-                    <span style="color: #ce9178">'Full Stack Developer'</span
-                    ><span style="color: #d4d4d4">,</span>
+                  <div class="code-line mb-2 code-indent">
+                    <span class="code-property">role:</span>
+                    <span class="code-string">'Full Stack Developer'</span>
+                    <span class="code-punctuation">,</span>
                   </div>
-                  <div class="code-line mb-2 ms-3">
-                    <span style="color: #92c5f8">passion:</span>
-                    <span style="color: #ce9178">'Building Amazing Apps'</span
-                    ><span style="color: #d4d4d4">,</span>
+                  <div class="code-line mb-2 code-indent">
+                    <span class="code-property">passion:</span>
+                    <span class="code-string">'Building Amazing Apps'</span>
+                    <span class="code-punctuation">,</span>
                   </div>
-                  <div class="code-line mb-2 ms-3">
-                    <span style="color: #92c5f8">skills:</span>
-                    <span style="color: #d4d4d4">[</span
-                    ><span style="color: #ce9178">'React'</span
-                    ><span style="color: #d4d4d4">, </span
-                    ><span style="color: #ce9178">'Node.js'</span
-                    ><span style="color: #d4d4d4">, </span
-                    ><span style="color: #ce9178">'Python'</span
-                    ><span style="color: #d4d4d4">]</span>
+                  <div class="code-line mb-2 code-indent">
+                    <span class="code-property">skills:</span>
+                    <span class="code-punctuation">[</span>
+                    <span class="code-string">'React'</span>
+                    <span class="code-punctuation">, </span>
+                    <span class="code-string">'Node.js'</span>
+                    <span class="code-punctuation">, </span>
+                    <span class="code-string">'Python'</span>
+                    <span class="code-punctuation">]</span>
                   </div>
                   <div class="code-line">
-                    <span style="color: #d4d4d4">}</span>
+                    <span class="code-punctuation">}</span>
                   </div>
                 </div>
 
                 <!-- Cursor Effect -->
-                <div
-                  class="typing-cursor position-absolute"
-                  style="
-                    background: #4ca1af;
-                    width: 2px;
-                    height: 20px;
-                    right: 30px;
-                    bottom: 30px;
-                    animation: blink 1s infinite;
-                  "
-                ></div>
+                <div class="typing-cursor"></div>
               </div>
 
               <!-- Floating Tech Icons -->
               <div class="floating-tech-icons">
-                <div
-                  class="tech-icon position-absolute"
-                  style="
-                    top: -20px;
-                    right: -20px;
-                    width: 50px;
-                    height: 50px;
-                    background: linear-gradient(135deg, #61dafb, #21b7d3);
-                    border-radius: 10px;
-                    animation: floatTech 3s ease-in-out infinite;
-                    box-shadow: 0 10px 25px rgba(97, 218, 251, 0.3);
-                  "
-                >
-                  <div
-                    class="position-absolute top-50 start-50 translate-middle fw-bold text-white"
-                  >
-                    React
-                  </div>
+                <div class="tech-icon react">
+                  <i class="fab fa-react"></i>
                 </div>
 
-                <div
-                  class="tech-icon position-absolute"
-                  style="
-                    bottom: -20px;
-                    left: -30px;
-                    width: 45px;
-                    height: 45px;
-                    background: linear-gradient(135deg, #68a063, #5a945a);
-                    border-radius: 10px;
-                    animation: floatTech 3s ease-in-out infinite 1s;
-                    box-shadow: 0 10px 25px rgba(104, 160, 99, 0.3);
-                  "
-                >
-                  <div
-                    class="position-absolute top-50 start-50 translate-middle fw-bold text-white small"
-                  >
-                    Node
-                  </div>
+                <div class="tech-icon node">
+                  <i class="fab fa-node-js"></i>
                 </div>
 
-                <div
-                  class="tech-icon position-absolute"
-                  style="
-                    top: 50px;
-                    left: -40px;
-                    width: 40px;
-                    height: 40px;
-                    background: linear-gradient(135deg, #ffd700, #ffaa00);
-                    border-radius: 10px;
-                    animation: floatTech 3s ease-in-out infinite 2s;
-                    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
-                  "
-                >
-                  <div
-                    class="position-absolute top-50 start-50 translate-middle fw-bold text-white small"
-                  >
-                    JS
-                  </div>
+                <div class="tech-icon js">
+                  <i class="fab fa-js-square"></i>
+                </div>
+
+                <div class="tech-icon python">
+                  <i class="fab fa-python"></i>
                 </div>
               </div>
 
               <!-- Background Glow -->
-              <div
-                class="code-glow position-absolute top-50 start-50 translate-middle"
-                style="
-                  width: 120%;
-                  height: 120%;
-                  background: radial-gradient(
-                    circle,
-                    rgba(76, 161, 175, 0.1),
-                    transparent
-                  );
-                  border-radius: 50%;
-                  filter: blur(60px);
-                  z-index: -1;
-                "
-              ></div>
+              <div class="code-glow"></div>
             </div>
           </div>
         </div>
 
         <!-- Enhanced Scroll Indicator -->
-        <div
-          class="position-absolute bottom-0 start-50 translate-middle-x pb-4"
-          style="z-index: 3"
-        >
-          <div
-            class="scroll-indicator text-center"
-            style="animation: bounce 2s infinite"
-          >
-            <div
-              class="scroll-line position-relative mx-auto mb-2"
-              style="
-                width: 2px;
-                height: 30px;
-                background: linear-gradient(
-                  to bottom,
-                  transparent,
-                  #4ca1af,
-                  transparent
-                );
-              "
-            ></div>
-            <i
-              class="bi bi-chevron-down fs-4 text-light"
-              style="opacity: 0.7"
-            ></i>
-          </div>
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <i class="bi bi-chevron-down fs-4 text-light"></i>
         </div>
       </div>
     </section>
