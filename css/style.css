@@ -923,14 +923,21 @@ small {
 }
 
 /* Scroll Indicator */
+/* Base scroll indicator styles */
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   animation: bounce 2s infinite;
   z-index: 3;
+  bottom: 2rem; /* Default position for home page */
+}
+
+/* Project and Publication pages specific position */
+.project-page .scroll-indicator,
+.publication-page .scroll-indicator {
+  bottom: 4.5rem; /* Increased height for better visibility without scrolling */
 }
 
 .scroll-line {
