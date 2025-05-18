@@ -118,21 +118,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <section
-      class="position-relative overflow-hidden pt-5 pb-3"
-      style="
-        min-height: 80vh;
-        background: linear-gradient(
-          135deg,
-          #1a1f2e 0%,
-          #2c3659 35%,
-          #3d4c7e 70%,
-          #1a1f2e 100%
-        );
-      "
-    >
-      <div class="container h-100 pt-5">
-        <div class="row align-items-center h-100 min-vh-80">
+    <section class="contact-hero-section">
+      <div class="container pt-5">
+        <div class="row align-items-center">
           <div class="col-lg-7 order-2 order-lg-1">
             <div class="hero-content pe-lg-4">
               <h1 class="display-2 fw-bold mb-4 text-white">
@@ -213,7 +201,7 @@
           <div class="col-lg-5 order-1 order-lg-2 text-center mb-5 mb-lg-0">
             <div class="position-relative">
               <!-- Avatar Image Container -->
-              <div class="position-relative d-inline-block">
+              <div class="position-relative d-inline-block contact-avatar-container">
                 <div
                   class="overflow-hidden shadow-lg mx-auto"
                   style="
@@ -236,7 +224,7 @@
                 </div>
 
                 <!-- Floating Icons -->
-                <div class="position-absolute" style="top: 20px; right: -10px">
+                <div class="position-absolute contact-floating-icon" style="top: 20px; right: -10px">
                   <div
                     class="rounded-circle p-3 shadow"
                     style="background-color: #17a2b8"
@@ -245,7 +233,7 @@
                   </div>
                 </div>
                 <div
-                  class="position-absolute"
+                  class="position-absolute contact-floating-icon"
                   style="bottom: 30px; left: -15px"
                 >
                   <div class="bg-white rounded-circle p-3 shadow">
@@ -268,6 +256,7 @@
           </div>
         </div>
       </div>
+      
       <!-- Scroll Indicator -->
       <div class="scroll-indicator">
         <div class="scroll-line"></div>
@@ -283,7 +272,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact-form" class="py-5 position-relative">
+    <section id="contact-form" class="py-5 position-relative contact-info-section">
       <div class="container py-5">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -298,10 +287,8 @@
 
             <!-- Contact Form -->
             <div
-              class="card border-0 shadow-lg"
+              class="card border-0 shadow-lg contact-form-card"
               style="
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
                 border-radius: 15px;
               "
             >
@@ -428,7 +415,7 @@
     </section>
 
     <!-- Contact Info Section -->
-    <section class="py-5">
+    <section class="py-5 contact-info-section">
       <div class="container">
         <div class="row g-4 justify-content-center">
           <div class="col-md-4 text-center">
@@ -483,7 +470,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-5">
+    <section class="py-5 contact-cta-section">
       <div class="container py-5 text-center">
         <h2 class="display-4 fw-bold mb-4">Ready to Start?</h2>
         <p class="lead mb-5 text-light opacity-90">

@@ -2076,3 +2076,179 @@ section li {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+
+
+
+/* =============================================
+   TRANSPARENT HERO SECTIONS - SIMPLIFIED VERSION
+   ============================================= */
+
+/* About Page - Profile Header */
+.about-page .profile-header {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+}
+
+/* Remove any background overlays */
+.about-page .profile-header::before,
+.about-page .profile-header::after {
+  display: none;
+}
+
+/* Contact Page - Hero Section */
+.contact-page .hero-section {
+  min-height: 100vh;
+  background: transparent !important;
+  position: relative;
+  overflow: hidden;
+  padding-top: 76px; /* Account for navbar height */
+  display: flex;
+  align-items: center;
+}
+
+/* Remove any background elements */
+.contact-page .hero-section::before,
+.contact-page .hero-section::after,
+.contact-page .hero-background {
+  display: none;
+}
+
+/* Container sizing to match homepage */
+.contact-page .hero-section .container {
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.contact-page .hero-section .row {
+  align-items: center;
+  height: 100%;
+  min-height: calc(100vh - 76px);
+}
+
+/* Simple avatar container for contact page */
+.contact-page .avatar-container {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.contact-page .avatar-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Make sure the rest of the page (below hero) is not transparent */
+.contact-page #contact-form,
+.contact-page section:not(.hero-section) {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+      135deg,
+      rgba(26, 31, 46, 0.95) 0%,
+      rgba(44, 54, 89, 0.93) 35%,
+      rgba(26, 31, 46, 0.95) 100%
+    ),
+    url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")
+      no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-page .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .about-page .profile-header {
+    padding: 3rem 0;
+  }
+}
+
+
+/* Position scroll indicator between sections */
+.scroll-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  animation: bounce 2s infinite;
+  z-index: 10;
+  margin-bottom: 1.5rem;
+}
+
+.scroll-line {
+  position: relative;
+  margin: 0 auto 0.5rem;
+  width: 2px;
+  height: 30px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #4ca1af,
+    transparent
+  );
+}
+
+.scroll-indicator i {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Adjust hero section to create more space */
+.contact-hero-section {
+  position: relative;
+  padding-bottom: 5rem; /* Increased space at bottom for scroll indicator */
+  padding-top: 3rem; /* Push content down from the top */
+  min-height: calc(100vh - 5rem); /* Adjusted height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  background: transparent !important;
+}
+
+/* Push hero content down */
+.contact-hero-section .container {
+  margin-top: 2rem; /* Add margin to the top of the container */
+}
+
+/* Add margin to the hero content elements */
+.contact-hero-section .hero-content {
+  margin-top: 1.5rem; /* Create space above the hero content */
+}
+
+/* Adjust the avatar container position */
+.contact-avatar-container {
+  margin-top: 2rem; /* Push avatar down a bit */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-hero-section {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+  }
+  
+  .contact-hero-section .container {
+    margin-top: 1rem;
+  }
+}
+
+/* Ensure contact form section starts properly */
+#contact-form {
+  padding-top: 5rem; /* Add more padding to the top of the contact form section */
+  background: transparent !important;
+}
