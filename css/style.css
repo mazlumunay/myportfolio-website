@@ -2252,3 +2252,126 @@ section li {
   padding-top: 5rem; /* Add more padding to the top of the contact form section */
   background: transparent !important;
 }
+
+/* Additional CSS for performance improvements */
+
+/* CSS optimizations to add to your style.css file */
+
+/* Optimize Page Loading */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-loaded .navbar,
+.page-loaded .hero-content {
+  transition: all 0.3s ease;
+}
+
+/* Add focus styles for keyboard navigation */
+body:not(.using-mouse) a:focus,
+body:not(.using-mouse) button:focus,
+body:not(.using-mouse) input:focus,
+body:not(.using-mouse) select:focus,
+body:not(.using-mouse) textarea:focus {
+  outline: 2px solid var(--accent-color) !important;
+  outline-offset: 2px !important;
+}
+
+body.using-mouse a:focus,
+body.using-mouse button:focus,
+body.using-mouse input:focus,
+body.using-mouse select:focus,
+body.using-mouse textarea:focus {
+  outline: none !important;
+}
+
+/* Optimize animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Improve rendering performance for animations */
+.navbar,
+.project-card,
+.hero-visual,
+.floating-tech-icons .tech-icon {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .cta-transparent,
+  footer,
+  .social-icon,
+  .btn,
+  .scroll-indicator {
+    display: none !important;
+  }
+  
+  body {
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6,
+  .text-white, .text-light, .text-accent {
+    color: #000 !important;
+  }
+  
+  .card, .glass-effect, .project-card {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+  
+  .lead, p, .card-text {
+    color: #333 !important;
+  }
+}
+
+/* Placeholder for lazy loading images */
+img.lazy-loading {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img.lazy-loaded {
+  opacity: 1;
+}
+
+/* Smooth text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
