@@ -1,0 +1,67 @@
+# netlify.toml - Configuration file for Netlify deployment
+
+[build]
+  publish = "/"
+  command = "echo 'No build command needed for static site'"
+
+# Redirect www to non-www version
+[[redirects]]
+  from = "https://www.mazlumunay.com/*"
+  to = "https://mazlumunay.com/:splat"
+  status = 301
+  force = true
+
+# Optional: URL rewrites for cleaner URLs
+[[redirects]]
+  from = "/projects/:id"
+  to = "/public/projects.html#:id"
+  status = 200
+
+# Handle 404 errors
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+    [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com https://ghchart.rshah.org https://github-readme-stats.vercel.app; font-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.gstatic.com; connect-src 'self' https://api.emailjs.com https://www.google-analytics.com; frame-src 'none';"
+    
+# Cache control for static assets
+[[headers]]
+  for = "*.js"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.png"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.svg"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Less aggressive caching for HTML files
+[[headers]]
+  for = "*.html"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

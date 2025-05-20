@@ -1,0 +1,10 @@
+# robots.txt for mazlumunay.com
+User-agent: *
+Allow: /
+
+# Allow all crawlers
+Sitemap: https://mazlumunay.com/sitemap.xml
+
+# Disallow these paths
+Disallow: /js/
+Disallow: /css/
