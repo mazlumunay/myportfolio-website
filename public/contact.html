@@ -623,5 +623,126 @@
 
     <!-- External JavaScript -->
     <script src="../js/index.js"></script>
+
+    <!-- Direct EmailJS Implementation -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize EmailJS directly
+        console.log("Initializing EmailJS directly on contact page");
+        emailjs.init({ publicKey: "IGYf_20wd6PVSqMbe" });
+
+        const contactForm = document.getElementById("contactForm");
+        if (!contactForm) {
+          console.error("Contact form not found on page");
+          return;
+        }
+
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          console.log("Form submitted");
+
+          // Prevent multiple submissions
+          const submitBtn = contactForm.querySelector('button[type="submit"]');
+          if (submitBtn.disabled) return;
+
+          // Check form validity
+          if (!contactForm.checkValidity()) {
+            contactForm.classList.add("was-validated");
+            return;
+          }
+
+          // Show loading state
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML =
+            '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+          submitBtn.disabled = true;
+
+          // Collect form data
+          const formData = new FormData(contactForm);
+          const templateParams = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            company: formData.get("company") || "Not provided",
+            subject: formData.get("subject"),
+            message: formData.get("message"),
+          };
+
+          console.log("Sending email with params:", templateParams);
+
+          // Send email using EmailJS
+          emailjs
+            .send("service_vniltzj", "template_2tlsc4l", templateParams)
+            .then(function (response) {
+              console.log("Email sent successfully:", response);
+
+              // Show success
+              submitBtn.innerHTML =
+                '<i class="bi bi-check-circle me-2"></i>Message Sent!';
+              submitBtn.classList.remove("btn-info");
+              submitBtn.classList.add("btn-success");
+
+              // Show success message
+              showAlert(
+                "success",
+                "Thank you! Your message has been sent successfully. I'll get back to you soon."
+              );
+
+              // Reset form
+              contactForm.reset();
+              contactForm.classList.remove("was-validated");
+
+              // Reset button after delay
+              resetButton(submitBtn, originalText, "btn-info");
+            })
+            .catch(function (error) {
+              console.error("EmailJS error:", error);
+
+              // Show error
+              submitBtn.innerHTML =
+                '<i class="bi bi-x-circle me-2"></i>Failed to Send';
+              submitBtn.classList.remove("btn-info");
+              submitBtn.classList.add("btn-danger");
+
+              // Show error message
+              showAlert(
+                "danger",
+                "Sorry! There was an error sending your message. Please try again or contact me directly at unaymazlum@gmail.com."
+              );
+
+              // Reset button after delay
+              resetButton(submitBtn, originalText, "btn-info");
+            });
+        });
+
+        // Helper functions
+        function showAlert(type, message) {
+          const alertDiv = document.createElement("div");
+          alertDiv.className = `alert alert-${type} mt-3`;
+          alertDiv.setAttribute("role", "alert");
+          alertDiv.innerHTML = `
+        <i class="bi bi-${
+          type === "success" ? "check-circle-fill" : "x-circle-fill"
+        } me-2"></i>
+        ${message}
+      `;
+
+          const submitBtn = contactForm.querySelector('button[type="submit"]');
+          if (submitBtn?.parentNode) {
+            submitBtn.parentNode.insertBefore(alertDiv, submitBtn.nextSibling);
+          }
+
+          // Remove alert after 5 seconds
+          setTimeout(() => alertDiv.remove(), 5000);
+        }
+
+        function resetButton(button, originalText, btnClass) {
+          setTimeout(() => {
+            button.innerHTML = originalText;
+            button.disabled = false;
+            button.className = `btn ${btnClass} btn-lg px-5 py-3 rounded-pill fw-bold text-dark`;
+          }, 5000);
+        }
+      });
+    </script>
   </body>
 </html>

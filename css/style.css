@@ -2375,3 +2375,43 @@ img.lazy-loaded {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Update Contact form */
+
+/* Enhanced form feedback styles */
+.form-control:focus {
+  border-color: #17a2b8;
+  box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
+}
+
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
+
+.was-validated .form-control:valid {
+  border-color: #198754;
+}
+
+/* Alert animations */
+.alert {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Improved button state transitions */
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Spinner animation */
+.spinner-border {
+  animation: spinner 0.75s linear infinite;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}

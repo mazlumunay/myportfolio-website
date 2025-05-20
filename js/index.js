@@ -87,7 +87,7 @@
     },
   };
 
-  // EmailJS Configuration - unchanged but moved to a module pattern
+  // EmailJS Configuration - improved with better error handling
   const emailJS = {
     // Credentials should ideally be moved to environment variables
     publicKey: "IGYf_20wd6PVSqMbe",
@@ -95,13 +95,34 @@
     templateID: "template_2tlsc4l",
 
     init: function () {
-      if (typeof emailjs !== "undefined") {
-        emailjs.init({ publicKey: this.publicKey });
+      try {
+        if (typeof emailjs !== "undefined") {
+          emailjs.init({ publicKey: this.publicKey });
+          console.log("EmailJS initialized successfully in index.js");
+        } else {
+          console.warn("EmailJS not available in index.js");
+        }
+      } catch (error) {
+        console.error("Error initializing EmailJS:", error);
       }
     },
 
     sendEmail: function (templateParams) {
-      return emailjs.send(this.serviceID, this.templateID, templateParams);
+      if (typeof emailjs === "undefined") {
+        console.error("EmailJS not available for sending");
+        return Promise.reject(new Error("EmailJS not available"));
+      }
+
+      return emailjs
+        .send(this.serviceID, this.templateID, templateParams)
+        .then((response) => {
+          console.log("Email sent successfully:", response);
+          return response;
+        })
+        .catch((error) => {
+          console.error("Email send failed:", error);
+          throw error;
+        });
     },
   };
 
@@ -143,8 +164,12 @@
     isSubmitting: false,
 
     init: function () {
-      if (!DOM.contactForm) return;
+      if (!DOM.contactForm) {
+        console.log("Contact form not found on this page");
+        return;
+      }
 
+      console.log("Initializing contact form in index.js");
       DOM.contactForm.addEventListener("submit", this.handleSubmit.bind(this));
 
       // Add honeypot field for spam protection
