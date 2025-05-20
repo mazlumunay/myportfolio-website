@@ -3,7 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO and Meta Tag Improvements -->
+    <meta
+      name="description"
+      content="Mazlum Unay - Full Stack Developer specializing in React, Node.js, Python and MongoDB. Toronto-based software engineer with engineering background."
+    />
+    <meta
+      name="keywords"
+      content="full stack developer, web developer, software engineer, Toronto, React, Node.js, Python, MongoDB"
+    />
+    <meta name="author" content="Mazlum Unay" />
+
+    <!-- Canonical URL - Update with your actual domain when you deploy -->
+    <link rel="canonical" href="https://mazlumunay.com/index.html" />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Mazlum Unay | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Toronto-based Full Stack Developer specializing in modern web development technologies and enterprise solutions."
+    />
+    <meta property="og:image" content="https://mazlumunay.com/img/avatar.png" />
+    <meta property="og:url" content="https://mazlumunay.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mazlum Unay | Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Toronto-based Full Stack Developer specializing in modern web development technologies and enterprise solutions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mazlumunay.com/img/avatar.png"
+    />
+
+    <!-- Mobile Specific Meta Tags -->
+    <meta name="theme-color" content="#1a1f2e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Additional Performance Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX"); // Replace G-XXXXXXXXXX with your actual GA4 tracking ID
+    </script>
     <title>Mazlum Unay | Full Stack Developer</title>
+
+    <!-- CSS Libraries -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,33 +80,49 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- Favicon (using your SVG as icon) -->
+    <!-- Favicon -->
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='20' fill='%231a1f2e'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' font-family='Arial, Helvetica, sans-serif' fill='%23FFD369'>MU</text></svg>"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- Preconnect to Google Fonts if you're using them -->
+    <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX"); // Replace G-XXXXXXXXXX with your actual GA4 tracking ID
+    </script>
   </head>
   <body>
-    <!--  NAVBAR (Now with transparency and glassmorphism) -->
+    <!-- NAVBAR (Now with transparency and glassmorphism) -->
     <nav
       class="navbar navbar-expand-lg navbar-dark sticky-top"
       style="transition: all 0.3s ease"
     >
       <div class="container">
         <!-- Logo and Brand Name (left side) -->
-        <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="./index.html"
+          aria-label="Mazlum Unay Homepage"
+        >
           <svg
             width="36"
             height="36"
@@ -46,6 +130,7 @@
             xmlns="http://www.w3.org/2000/svg"
             class="d-inline-block me-2 transition-all"
             style="transition: transform 0.3s ease"
+            aria-hidden="true"
           >
             <rect width="120" height="120" rx="20" fill="#1a1f2e" />
             <text
@@ -84,6 +169,7 @@
               <a
                 class="nav-link position-relative px-3 py-2 active"
                 href="./index.html"
+                aria-current="page"
               >
                 <span class="position-relative">Home</span>
               </a>
@@ -152,7 +238,8 @@
                 <span
                   class="badge text-uppercase px-4 py-3 fw-semibold position-relative"
                 >
-                  <i class="bi bi-code-slash me-2"></i> Full Stack Developer
+                  <i class="bi bi-code-slash me-2" aria-hidden="true"></i> Full
+                  Stack Developer
                 </span>
               </div>
 
@@ -176,21 +263,6 @@
                 </p>
               </div>
 
-              <!-- Tech Stack Tags
-              <div class="tech-stack">
-                <p class="text-light mb-3">
-                  TECH STACK:
-                </p>
-                <div class="d-flex flex-wrap gap-2">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">MongoDB</span>
-                  <span class="tech-tag">SQL</span>
-                  <span class="tech-tag">AI</span>
-                </div>
-              </div> -->
-
               <!-- Enhanced CTA Buttons -->
               <div class="hero-buttons d-flex flex-wrap gap-4">
                 <a
@@ -198,7 +270,8 @@
                   class="btn btn-primary btn-lg px-5 py-3 position-relative overflow-hidden"
                 >
                   <span class="position-relative">
-                    Explore Projects <i class="bi bi-arrow-right ms-2"></i>
+                    Explore Projects
+                    <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
                   </span>
                 </a>
 
@@ -206,7 +279,8 @@
                   href="./public/contact.html"
                   class="btn btn-outline-light btn-lg px-5 py-3 position-relative"
                 >
-                  Let's Collaborate <i class="bi bi-chat-left-text ms-2"></i>
+                  Let's Collaborate
+                  <i class="bi bi-chat-left-text ms-2" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -273,19 +347,19 @@
               <!-- Floating Tech Icons -->
               <div class="floating-tech-icons">
                 <div class="tech-icon react">
-                  <i class="fab fa-react"></i>
+                  <i class="fab fa-react" aria-hidden="true"></i>
                 </div>
 
                 <div class="tech-icon node">
-                  <i class="fab fa-node-js"></i>
+                  <i class="fab fa-node-js" aria-hidden="true"></i>
                 </div>
 
                 <div class="tech-icon js">
-                  <i class="fab fa-js-square"></i>
+                  <i class="fab fa-js-square" aria-hidden="true"></i>
                 </div>
 
                 <div class="tech-icon python">
-                  <i class="fab fa-python"></i>
+                  <i class="fab fa-python" aria-hidden="true"></i>
                 </div>
               </div>
 
@@ -295,22 +369,24 @@
           </div>
         </div>
 
-        <!-- Enhanced Scroll Indicator -->
+        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
           <div class="scroll-line"></div>
-          <i class="bi bi-chevron-down fs-4 text-light"></i>
+          <a
+            href="#all-projects"
+            class="text-light opacity-75 text-decoration-none"
+            aria-label="Scroll to projects"
+          >
+            <div>
+              <i
+                class="bi bi-chevron-down fs-4 text-light"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </a>
         </div>
       </div>
     </section>
-
-    <!-- Simple scroll indicator -->
-    <!-- <div
-      class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x pb-4"
-    >
-      <div class="scroll-arrow text-white">
-        <i class="bi bi-chevron-down fs-4"></i>
-      </div>
-    </div> -->
 
     <!-- Projects Section with Enhanced Cards -->
     <section id="all-projects" class="py-5 bg-dark-2">
@@ -407,7 +483,7 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  <i class="bi bi-eye me-2"></i>Live Demo
+                  <i class="bi bi-eye me-2" aria-hidden="true"></i>Live Demo
                 </a>
                 <a
                   href="https://github.com/ShivaniSehgal07/TechForum"
@@ -415,7 +491,8 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  <i class="bi bi-code-slash me-2"></i>View Code
+                  <i class="bi bi-code-slash me-2" aria-hidden="true"></i>View
+                  Code
                 </a>
               </div>
             </div>
@@ -504,7 +581,7 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  <i class="bi bi-eye me-2"></i>Live Demo
+                  <i class="bi bi-eye me-2" aria-hidden="true"></i>Live Demo
                 </a>
                 <a
                   href="https://github.com/mazlumunay/savoria-ecommerce"
@@ -512,7 +589,8 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  <i class="bi bi-code-slash me-2"></i>View Code
+                  <i class="bi bi-code-slash me-2" aria-hidden="true"></i>View
+                  Code
                 </a>
               </div>
             </div>
@@ -592,12 +670,12 @@
               </ul>
               <div class="d-flex flex-wrap gap-3">
                 <a
-                  href="https://mazlumunay.github.io/TinDog-Project/#"
+                  href="https://mazlumunay.github.io/TinDog-Project/"
                   class="btn btn-accent px-4"
                   target="_blank"
                   rel="noopener"
                 >
-                  <i class="bi bi-eye me-2"></i>Live Demo
+                  <i class="bi bi-eye me-2" aria-hidden="true"></i>Live Demo
                 </a>
                 <a
                   href="https://github.com/mazlumunay/TinDog-Project"
@@ -605,7 +683,8 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  <i class="bi bi-code-slash me-2"></i>View Code
+                  <i class="bi bi-code-slash me-2" aria-hidden="true"></i>View
+                  Code
                 </a>
               </div>
             </div>
@@ -622,7 +701,8 @@
               background-color: rgba(255, 255, 255, 0.05);
             "
           >
-            View Full Portfolio <i class="bi bi-arrow-right ms-2"></i>
+            View Full Portfolio
+            <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -643,7 +723,10 @@
               <div class="card-body p-4">
                 <div class="d-flex align-items-start">
                   <div class="flex-shrink-0 me-3">
-                    <i class="bi bi-journal-text fs-1 text-accent"></i>
+                    <i
+                      class="bi bi-journal-text fs-1 text-accent"
+                      aria-hidden="true"
+                    ></i>
                   </div>
                   <div>
                     <div class="d-flex align-items-center gap-2 mb-2">
@@ -656,7 +739,8 @@
                         >Featured Research</span
                       >
                       <small class="text-muted"
-                        ><i class="bi bi-calendar me-1"></i>2019</small
+                        ><i class="bi bi-calendar me-1" aria-hidden="true"></i
+                        >2019</small
                       >
                     </div>
                     <h3 class="h4 card-title text-white">
@@ -664,8 +748,8 @@
                       methods
                     </h3>
                     <p class="text-muted mb-2">
-                      <i class="bi bi-journal-text me-2"></i>Medical
-                      Technologies Congress (TIPTEKNO)
+                      <i class="bi bi-journal-text me-2" aria-hidden="true"></i
+                      >Medical Technologies Congress (TIPTEKNO)
                     </p>
                     <p class="card-text text-light mb-3 opacity-90">
                       This paper presents an automated method for counting
@@ -703,7 +787,8 @@
                       href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pn4cZR0AAAAJ&citation_for_view=pn4cZR0AAAAJ:W7OEmFMy1HYC"
                       class="btn btn-accent btn-sm"
                     >
-                      <i class="bi bi-mortarboard me-1"></i> Google Scholar
+                      <i class="bi bi-mortarboard me-1" aria-hidden="true"></i>
+                      Google Scholar
                     </a>
                   </div>
                 </div>
@@ -717,7 +802,10 @@
               <div class="card-body p-4">
                 <div class="d-flex align-items-start">
                   <div class="flex-shrink-0 me-3">
-                    <i class="bi bi-journal-text fs-1 text-accent"></i>
+                    <i
+                      class="bi bi-journal-text fs-1 text-accent"
+                      aria-hidden="true"
+                    ></i>
                   </div>
                   <div>
                     <h3 class="h4 card-title text-white">
@@ -725,8 +813,8 @@
                       visually impaired people on sidewalks
                     </h3>
                     <p class="text-muted mb-2">
-                      <i class="bi bi-calendar me-2"></i>Medical Technologies
-                      Congress (TIPTEKNO) • 2019
+                      <i class="bi bi-calendar me-2" aria-hidden="true"></i
+                      >Medical Technologies Congress (TIPTEKNO) • 2019
                     </p>
                     <p class="card-text text-light mb-3 opacity-90">
                       A novel system designed to help visually impaired
@@ -763,7 +851,8 @@
                       href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pn4cZR0AAAAJ&citation_for_view=pn4cZR0AAAAJ:Tyk-4Ss8FVUC"
                       class="btn btn-accent btn-sm"
                     >
-                      <i class="bi bi-mortarboard me-1"></i> Google Scholar
+                      <i class="bi bi-mortarboard me-1" aria-hidden="true"></i>
+                      Google Scholar
                     </a>
                   </div>
                 </div>
@@ -782,7 +871,8 @@
               background-color: rgba(255, 255, 255, 0.05);
             "
           >
-            View All Publications <i class="bi bi-arrow-right ms-2"></i>
+            View All Publications
+            <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -798,27 +888,33 @@
           </p>
 
           <div class="text-center">
+            <!-- Updated GitHub contribution chart with proper fallback -->
             <img
-              src="https://ghchart.rshah.org/mazlumunay?color1=1a0000&color2=ff3333&color3=ff0000"
-              alt="GitHub Contributions"
+              src="https://ghchart.rshah.org/mazlumunay"
+              alt="GitHub Contributions Chart"
               class="img-fluid mb-4 rounded-3"
               style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))"
+              onerror="this.onerror=null; this.src='img/github-placeholder.png'; this.alt='GitHub Contributions - Image could not be loaded';"
             />
 
             <div
               class="d-flex flex-wrap justify-content-center gap-4 github-stats-container"
             >
+              <!-- GitHub stats with error handling -->
               <img
                 src="https://github-readme-stats.vercel.app/api?username=mazlumunay&show_icons=true&theme=dark"
                 alt="GitHub Stats"
                 class="img-fluid rounded-3"
                 style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))"
+                onerror="this.onerror=null; this.src='img/github-stats-placeholder.png'; this.alt='GitHub Stats - Image could not be loaded';"
               />
+
               <img
                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=mazlumunay&layout=compact&theme=dark"
                 alt="Top Languages"
                 class="img-fluid rounded-3"
                 style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))"
+                onerror="this.onerror=null; this.src='img/github-langs-placeholder.png'; this.alt='Top Languages - Image could not be loaded';"
               />
             </div>
           </div>
@@ -837,13 +933,15 @@
         </p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
           <a href="./public/contact.html" class="btn btn-primary btn-lg px-5">
-            Get In Touch <i class="bi bi-chat-left-text ms-2"></i>
+            Get In Touch
+            <i class="bi bi-chat-left-text ms-2" aria-hidden="true"></i>
           </a>
           <a
             href="./public/projects.html"
             class="btn btn-outline-light btn-lg px-5"
           >
-            View Portfolio <i class="bi bi-arrow-right ms-2"></i>
+            View Portfolio
+            <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -855,7 +953,7 @@
         <div class="row">
           <div class="col-md-6 text-center text-md-start">
             <p class="mb-0 opacity-90">
-              &copy; 2025 Mazlum Unay. All rights reserved.
+              &copy; 2024 Mazlum Unay. All rights reserved.
             </p>
           </div>
           <div class="col-md-6 text-center text-md-end">
@@ -866,7 +964,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="bi bi-linkedin fs-4"></i>
+              <i class="bi bi-linkedin fs-4" aria-hidden="true"></i>
+              <span class="visually-hidden">LinkedIn</span>
             </a>
             <a
               href="https://github.com/mazlumunay"
@@ -875,7 +974,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="bi bi-github fs-4"></i>
+              <i class="bi bi-github fs-4" aria-hidden="true"></i>
+              <span class="visually-hidden">GitHub</span>
             </a>
             <a
               href="mailto:unaymazlum@gmail.com"
@@ -884,7 +984,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="bi bi-envelope fs-4"></i>
+              <i class="bi bi-envelope fs-4" aria-hidden="true"></i>
+              <span class="visually-hidden">Email</span>
             </a>
             <a
               href="https://scholar.google.com/citations?user=pn4cZR0AAAAJ&hl=en"
@@ -893,7 +994,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="bi bi-mortarboard fs-4"></i>
+              <i class="bi bi-mortarboard fs-4" aria-hidden="true"></i>
+              <span class="visually-hidden">Google Scholar</span>
             </a>
             <a
               href="https://www.researchgate.net/profile/Mazlum-Unay"
@@ -902,7 +1004,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="bi bi-journal-text fs-4"></i>
+              <i class="bi bi-journal-text fs-4" aria-hidden="true"></i>
+              <span class="visually-hidden">ResearchGate</span>
             </a>
           </div>
         </div>
@@ -910,8 +1013,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Optional: Add scroll effect for navbar -->
-    <script src="./js/index.js"></script>
   </body>
 </html>
