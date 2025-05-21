@@ -1,3 +1,77 @@
 .DS_Store
 # Local Netlify folder
 .netlify
+
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+*.swp
+*.swo
+
+# Node.js (if you use npm for build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build and dist directories
+dist/
+build/
+.tmp/
+.temp/
+.cache/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vercel
+.netlify
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Dependencies that should be installed per environment
+/vendor/
+
+# If using image manipulation tools or build processes
+/original-images/
+*.psd
+*.ai
+*.sketch
+
+# Minified files should be generated on build, not tracked
+# Uncomment if you're generating these files during build process
+# *.min.js
+# *.min.css
+
+# Testing and coverage directories
+/coverage/
+/.nyc_output
+
+# Local SSL certificates
+*.pem
+*.key
+*.crt
