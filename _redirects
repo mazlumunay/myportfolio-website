@@ -1,16 +1,4 @@
-# _redirects - Netlify redirects file
+# _redirects - Netlify redirects file (simplified to avoid conflicts)
 
-# Redirect domain aliases to primary domain
-https://www.mazlumunay.com/* https://mazlumunay.com/:splat 301!
-
-# Optional: URL rewrites for cleaner URLs
-/projects/:id /public/projects.html#:id 200
-/about /public/about.html 200
-/contact /public/contact.html 200
-/publications /public/publications.html 200
-
-# Redirect old URLs if you're migrating from another site
-# /old-page.html /new-page.html 301
-
-# Handle 404 error
+# Handle 404 errors
 /* /404.html 404
