@@ -1,10 +1,14 @@
-# netlify.toml - Configuration file for Netlify deployment
+# netlify.toml - Optimized Configuration for mazlumunay.com
 
 [build]
   publish = "/"
   command = "echo 'No build command needed for static site'"
 
-# Redirect www to non-www version
+# ==============================================================================
+# REDIRECTS
+# ==============================================================================
+
+# Redirect www to non-www version (primary domain redirect)
 [[redirects]]
   from = "https://www.mazlumunay.com/*"
   to = "https://mazlumunay.com/:splat"
@@ -17,34 +21,81 @@
   to = "/public/projects.html#:id"
   status = 200
 
-# Handle 404 errors
+# Handle 404 errors (must be last redirect rule)
 [[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
 
-# Security headers for all pages
+# ==============================================================================
+# SECURITY HEADERS
+# ==============================================================================
+
+# Main security headers for all pages
 [[headers]]
   for = "/*"
     [headers.values]
+    # Security Headers
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "no-referrer-when-downgrade"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com https://ghchart.rshah.org https://github-readme-stats.vercel.app; font-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.gstatic.com; connect-src 'self' https://api.emailjs.com https://www.google-analytics.com; frame-src 'none';"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), vr=(), accelerometer=(), gyroscope=(), magnetometer=(), clipboard-read=(), clipboard-write=()"
     
-# Cache control for static assets
+    # HSTS (HTTP Strict Transport Security) - Forces HTTPS
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    
+    # Content Security Policy - Updated for 2024/2025
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' 
+        https://cdn.jsdelivr.net 
+        https://cdnjs.cloudflare.com 
+        https://www.googletagmanager.com 
+        https://www.google-analytics.com 
+        https://googletagmanager.com
+        https://analytics.google.com;
+      style-src 'self' 'unsafe-inline' 
+        https://cdn.jsdelivr.net 
+        https://cdnjs.cloudflare.com 
+        https://fonts.googleapis.com;
+      img-src 'self' data: https: blob:
+        https://www.google-analytics.com 
+        https://ghchart.rshah.org 
+        https://github-readme-stats.vercel.app
+        https://images.unsplash.com;
+      font-src 'self' 
+        https://cdn.jsdelivr.net 
+        https://cdnjs.cloudflare.com 
+        https://fonts.gstatic.com;
+      connect-src 'self' 
+        https://api.emailjs.com 
+        https://www.google-analytics.com
+        https://analytics.google.com
+        https://googletagmanager.com;
+      frame-src 'none';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self' https://formspree.io https://api.emailjs.com;
+    """
+
+# ==============================================================================
+# CACHE CONTROL HEADERS
+# ==============================================================================
+
+# JavaScript files - 1 year cache with immutable
 [[headers]]
   for = "*.js"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# CSS files - 1 year cache with immutable
 [[headers]]
   for = "*.css"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Images - 1 year cache with immutable
 [[headers]]
   for = "*.png"
     [headers.values]
@@ -56,12 +107,80 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "*.jpeg"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "*.svg"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Less aggressive caching for HTML files
+[[headers]]
+  for = "*.webp"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.avif"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Web fonts - 1 year cache
+[[headers]]
+  for = "*.woff"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.woff2"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.ttf"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML files - Short cache for dynamic content
 [[headers]]
   for = "*.html"
     [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# JSON and XML files - Medium cache
+[[headers]]
+  for = "*.json"
+    [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.xml"
+    [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# ==============================================================================
+# ADDITIONAL OPTIMIZATIONS
+# ==============================================================================
+
+# Favicon and manifest files
+[[headers]]
+  for = "/favicon.ico"
+    [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/manifest.json"
+    [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Robots.txt and sitemap
+[[headers]]
+  for = "/robots.txt"
+    [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/sitemap.xml"
+    [headers.values]
+    Cache-Control = "public, max-age=86400"
